@@ -1,0 +1,190 @@
+
+STEP {
+    COL=1
+    ID=0
+    NAME=board2
+}
+
+
+LAYER {
+    ROW=1
+    CONTEXT=BOARD
+    TYPE=COMPONENT
+    ID=1
+    NAME=comp_+_top
+    POLARITY=POSITIVE
+    START_NAME=
+    END_NAME=
+    OLD_NAME=
+}
+
+
+LAYER {
+    ROW=2
+    CONTEXT=BOARD
+    TYPE=SILK_SCREEN
+    ID=2
+    NAME=sst
+    POLARITY=POSITIVE
+    START_NAME=
+    END_NAME=
+    OLD_NAME=
+}
+
+
+LAYER {
+    ROW=3
+    CONTEXT=BOARD
+    TYPE=SOLDER_MASK
+    ID=4
+    NAME=smt
+    POLARITY=POSITIVE
+    START_NAME=
+    END_NAME=
+    OLD_NAME=
+}
+
+
+LAYER {
+    ROW=4
+    CONTEXT=BOARD
+    TYPE=SIGNAL
+    ID=5
+    NAME=l1
+    POLARITY=POSITIVE
+    START_NAME=
+    END_NAME=
+    OLD_NAME=
+}
+
+
+LAYER {
+    ROW=5
+    CONTEXT=BOARD
+    TYPE=DIELECTRIC
+    ID=6
+    NAME=core
+    POLARITY=POSITIVE
+    START_NAME=
+    END_NAME=
+    OLD_NAME=
+    DIELECTRIC_TYPE=Prepreg
+}
+
+
+LAYER {
+    ROW=6
+    CONTEXT=BOARD
+    TYPE=SIGNAL
+    ID=7
+    NAME=l2
+    POLARITY=POSITIVE
+    START_NAME=
+    END_NAME=
+    OLD_NAME=
+}
+
+
+LAYER {
+    ROW=7
+    CONTEXT=BOARD
+    TYPE=SOLDER_MASK
+    ID=8
+    NAME=smb
+    POLARITY=POSITIVE
+    START_NAME=
+    END_NAME=
+    OLD_NAME=
+}
+
+
+LAYER {
+    ROW=8
+    CONTEXT=BOARD
+    TYPE=SOLDER_PASTE
+    ID=9
+    NAME=spb
+    POLARITY=POSITIVE
+    START_NAME=
+    END_NAME=
+    OLD_NAME=
+}
+
+
+LAYER {
+    ROW=9
+    CONTEXT=BOARD
+    TYPE=SILK_SCREEN
+    ID=10
+    NAME=ssb
+    POLARITY=POSITIVE
+    START_NAME=
+    END_NAME=
+    OLD_NAME=
+}
+
+
+LAYER {
+    ROW=10
+    CONTEXT=BOARD
+    TYPE=COMPONENT
+    ID=11
+    NAME=comp_+_bot
+    POLARITY=POSITIVE
+    START_NAME=
+    END_NAME=
+    OLD_NAME=
+}
+
+
+LAYER {
+    ROW=11
+    CONTEXT=BOARD
+    TYPE=DRILL
+    ID=12
+    NAME=d_1_2
+    POLARITY=POSITIVE
+    START_NAME=l1
+    END_NAME=l2
+    OLD_NAME=
+}
+
+
+LAYER {
+    ROW=12
+    CONTEXT=MISC
+    TYPE=DOCUMENT
+    ID=13
+    NAME=assemt
+    POLARITY=POSITIVE
+    START_NAME=
+    END_NAME=
+    OLD_NAME=
+}
+
+
+LAYER {
+    ROW=13
+    CONTEXT=MISC
+    TYPE=DOCUMENT
+    ID=14
+    NAME=assemb
+    POLARITY=POSITIVE
+    START_NAME=
+    END_NAME=
+    OLD_NAME=
+}
+
+
+LAYER {
+    ROW=14
+    CONTEXT=MISC
+    TYPE=DOCUMENT
+    ID=15
+    NAME=ddt
+    POLARITY=POSITIVE
+    START_NAME=
+    END_NAME=
+    OLD_NAME=
+}
+

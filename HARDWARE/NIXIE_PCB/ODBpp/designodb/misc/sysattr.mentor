@@ -1,0 +1,129 @@
+UNITS=INCH
+
+TEXT {
+  NAME    = .bond_name
+  ENTITY  = FEATURE
+  MIN_LEN = 0
+  MAX_LEN = 64
+  GROUP   = HDI
+  PROMPT  = Name of Wire Bond
+}
+TEXT {
+  NAME    = .bonding_profile
+  ENTITY  = FEATURE
+  MIN_LEN = 0
+  MAX_LEN = 64
+  GROUP   = HDI
+  PROMPT  = Bonding Profile
+}
+TEXT {
+  NAME    = .comp_name
+  ENTITY  = FEATURE
+  MIN_LEN = 0
+  MAX_LEN = 64
+  GROUP   = HDI
+  PROMPT  = Name of Die Component
+}
+OPTION {
+  NAME    = .ecmp_type
+  ENTITY  = FEATURE
+  OPTIONS = resistor;capacitor
+  GROUP   = Embedded Passives
+  PROMPT  = Embedded Passive Type
+}
+TEXT {
+  NAME    = .eco
+  ENTITY  = STEP
+  MIN_LEN = 0
+  MAX_LEN = 100
+  PROMPT  = Engineering Change List
+}
+OPTION {
+  NAME    = .hdi_assembly_tech
+  ENTITY  = LAYER
+  OPTIONS = None;WireBond;FlipChip;Hybrid
+  DEF     = None
+  PROMPT  = HDI Assembly Technology
+}
+TEXT {
+  NAME    = .lead_form
+  ENTITY  = COMPONENT;PACKAGE
+  MIN_LEN = 1
+  MAX_LEN = 64
+  GROUP   = DFx Component
+  PROMPT  = Lead Form
+  OPTIONS = gw-small;gw;j-bend;l-bend;c-bend-wrap;side-concave;corner-concave;end-cap;other;flat-insulated;qfn;lcc;capae;m-column;lga;ball;axial;radial;inline;wire;pin;pressfit;mixed;n/a
+}
+TEXT {
+  NAME    = .package_type
+  ENTITY  = COMPONENT;PACKAGE
+  MIN_LEN = 1
+  MAX_LEN = 64
+  GROUP   = DFx Component
+  PROMPT  = Package Type
+  OPTIONS = melf;axial;radial;cyl-tall;cc;chip;connector;fp;ga;sip-dip;smt-misc;so;thru-misc
+}
+FLOAT {
+  NAME    = .pin_length
+  ENTITY  = COMPONENT;PACKAGE
+  MIN_VAL = 0.0
+  MAX_VAL = 10.0
+  UNITS   = INCH_MM
+  GROUP   = Component
+  PROMPT  = Pin Length
+}
+TEXT {
+  NAME    = .pin_name
+  ENTITY  = FEATURE
+  MIN_LEN = 0
+  MAX_LEN = 64
+  GROUP   = HDI
+  PROMPT  = Name of Die Bump
+}
+INTEGER {
+  NAME    = .src_orientation
+  ENTITY  = COMPONENT
+  DEF     = -1
+  MIN_VAL = -1
+  MAX_VAL = 3
+  GROUP   = DFx Component
+  PROMPT  = Source Orientation
+}
+TEXT {
+  NAME    = .vpl1_pkg_name
+  ENTITY  = COMPONENT;PACKAGE
+  MIN_LEN = 0
+  MAX_LEN = 100
+  GROUP   = Component
+  PROMPT  = VPL Package name (VPL1)
+}
+
+OPTION {
+  NAME    = .rf
+  ENTITY  = FEATURE
+  OPTIONS = original;fixed
+  GROUP   = Feature
+  PROMPT  = Radio Frequency Surface
+}
+OPTION {
+  NAME    = .layer_side
+  ENTITY  = LAYER
+  OPTIONS = Top;Bottom;Inner;None
+  DEF     = None
+  PROMPT  = Layer Side
+}
+
+TEXT {
+  NAME    = .string_font
+  ENTITY  = FEATURE
+  MIN_LEN = 0
+  MAX_LEN = 100
+  PROMPT  = String font
+}
+TEXT {
+  NAME    = .backdrill_penetrate_stop_layer
+  ENTITY  = LAYER
+  MIN_LEN = 0
+  MAX_LEN = 64
+  PROMPT  = Backdrill not Penetrate Layer Name 
+}

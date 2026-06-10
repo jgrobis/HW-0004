@@ -1,0 +1,391 @@
+UNITS=INCH
+
+TEXT {
+  NAME    = .assembly_proc_top
+  ENTITY  = STEP
+  MIN_LEN = 0
+  MAX_LEN = 20
+  PROMPT  = Assembly Process (Top)
+}
+
+TEXT {
+  NAME    = .assembly_proc_bottom
+  ENTITY  = STEP
+  MIN_LEN = 0
+  MAX_LEN = 20
+  PROMPT  = Assembly Process (Bottom)
+}
+
+OPTION {
+  NAME    = .fs_direction_top
+  ENTITY  = STEP
+  OPTIONS = Left2Right;Top2Bottom;Right2Left;Bottom2Top
+  DEF     = Left2Right
+  PROMPT  = Flow Solder Direction (Top)
+}
+
+OPTION {
+  NAME    = .fs_direction_bottom
+  ENTITY  = STEP
+  OPTIONS = Left2Right;Top2Bottom;Right2Left;Bottom2Top
+  DEF     = Right2Left
+  PROMPT  = Flow Solder Direction (Bottom)
+}
+
+OPTION {
+  NAME    = .smt_direction_top
+  ENTITY  = STEP
+  OPTIONS = Left2Right;Top2Bottom;Right2Left;Bottom2Top
+  DEF     = Left2Right
+  PROMPT  = SMT Direction (Top)
+}
+
+OPTION {
+  NAME    = .smt_direction_bottom
+  ENTITY  = STEP
+  OPTIONS = Left2Right;Top2Bottom;Right2Left;Bottom2Top
+  DEF     = Right2Left
+  PROMPT  = SMT Direction (Bottom)
+}
+
+TEXT {
+  NAME    = .spo_shape
+  ENTITY  = FEATURE;COMPONENT
+  MIN_LEN = 0
+  MAX_LEN = 64
+  GROUP   = Solderpaste Optimization
+  PROMPT  = Apply Solderpaste Symbol
+}
+
+FLOAT {
+  NAME    = .spo_move_center
+  ENTITY  = FEATURE;COMPONENT
+  DEF     = 0
+  MIN_VAL = -500
+  MAX_VAL = 500
+  UNITS   = MIL_MICRON
+  GROUP   = Solderpaste Optimization
+  PROMPT  = Shift Solderpaste Symbol
+}
+
+OPTION {
+  NAME    = .spo_w_mode
+  ENTITY  = FEATURE;COMPONENT
+  OPTIONS = Distance;Factor;Value;Area
+  DEF     = Distance
+  GROUP   = Solderpaste Optimization
+  PROMPT  = Create Solderpaste Wide Mode
+}
+
+FLOAT {
+  NAME    = .spo_w_val
+  ENTITY  = FEATURE;COMPONENT
+  DEF     = 5
+  MIN_VAL = -500
+  MAX_VAL = 500
+  UNITS   = MIL_MICRON
+  GROUP   = Solderpaste Optimization
+  PROMPT  = Solderpaste Width Relative Value
+}
+
+FLOAT {
+  NAME    = .spo_w_fact
+  ENTITY  = FEATURE;COMPONENT
+  DEF     = 0.8
+  MIN_VAL = 0.3
+  MAX_VAL = 2.0
+  GROUP   = Solderpaste Optimization
+  PROMPT  = Solderpaste Width Factor Value
+}
+
+OPTION {
+  NAME    = .spo_h_mode
+  ENTITY  = FEATURE;COMPONENT
+  OPTIONS = Distance;Factor;Value
+  DEF     = Distance
+  GROUP   = Solderpaste Optimization
+  PROMPT  = Create Solderpaste Height Mode
+}
+
+FLOAT {
+  NAME    = .spo_h_val
+  ENTITY  = FEATURE;COMPONENT
+  DEF     = 5
+  MIN_VAL = -500
+  MAX_VAL = 500
+  UNITS   = MIL_MICRON
+  GROUP   = Solderpaste Optimization
+  PROMPT  = Solderpaste Height Relative Value
+}
+
+FLOAT {
+  NAME    = .spo_h_fact
+  ENTITY  = FEATURE;COMPONENT
+  DEF     = 0.8
+  MIN_VAL = 0.3
+  MAX_VAL = 2.0
+  GROUP   = Solderpaste Optimization
+  PROMPT  = Solderpaste Height Factor Value
+}
+
+OPTION {
+  NAME    = .spo_s_mode
+  ENTITY  = FEATURE;COMPONENT
+  OPTIONS = Distance;Factor;Value;Area
+  DEF     = Distance
+  GROUP   = Solderpaste Optimization
+  PROMPT  = Create Solderpaste Symmetric Mode
+}
+
+FLOAT {
+  NAME    = .spo_s_val
+  ENTITY  = FEATURE;COMPONENT
+  DEF     = 5
+  MIN_VAL = -500
+  MAX_VAL = 500
+  UNITS   = MIL_MICRON
+  GROUP   = Solderpaste Optimization
+  PROMPT  = Solderpaste Symmetric Relative Value
+}
+
+FLOAT {
+  NAME    = .spo_s_fact
+  ENTITY  = FEATURE;COMPONENT
+  DEF     = 0.8
+  MIN_VAL = 0.3
+  MAX_VAL = 2.0
+  GROUP   = Solderpaste Optimization
+  PROMPT  = Solderpaste Symmetric Factor Value
+}
+
+OPTION {
+  NAME    = .spo_p_mode
+  ENTITY  = FEATURE;COMPONENT
+  OPTIONS = Distance;Area
+  DEF     = Distance
+  GROUP   = Solderpaste Optimization
+  PROMPT  = Create Solderpaste Nonstandard Mode
+}
+
+OPTION {
+  NAME    = .axi_direction
+  ENTITY  = STEP
+  OPTIONS = Left2Right;Top2Bottom;Right2Left;Bottom2Top
+  DEF     = Left2Right
+  PROMPT  = Assembly X-Ray Inspection Direction
+}
+
+FLOAT {
+  NAME    = .rot_correction
+  ENTITY  = COMPONENT
+  DEF     = 0
+  MIN_VAL = 0
+  MAX_VAL = 360
+  GROUP   = DFx Component
+  PROMPT  = Rotation Correction
+}
+
+TEXT {
+  NAME    = .machine_pkg
+  ENTITY  = COMPONENT
+  MIN_LEN = 0
+  MAX_LEN = 100
+  GROUP   = Component
+  PROMPT  = Package Name for ALE
+}
+
+TEXT {
+  NAME    = .station
+  ENTITY  = COMPONENT
+  MIN_LEN = 0
+  MAX_LEN = 255
+  GROUP   = OBSOLETE
+  PROMPT  = ALE Station
+}
+
+INTEGER {
+  NAME    = .mount_stage
+  ENTITY  = COMPONENT
+  DEF     = 0
+  MIN_VAL = 0
+  MAX_VAL = 255
+  GROUP   = Component
+  PROMPT  = Placement Machine Number
+}
+
+FLOAT {
+  NAME    = .spo_shape_rotate
+  ENTITY  = FEATURE;COMPONENT
+  DEF     = 0
+  MIN_VAL = 0
+  MAX_VAL = 360
+  GROUP   = Solderpaste Optimization
+  PROMPT  = Apply Solderpaste Rotation
+}
+
+BOOLEAN {
+  NAME    = .spo_shape_stretch
+  ENTITY  = FEATURE;COMPONENT
+  DEF     = NO
+  GROUP   = Solderpaste Optimization
+  PROMPT  = Extend Solderpaste Symbol
+}
+
+FLOAT {
+  NAME    = .spo_p_val
+  ENTITY  = FEATURE;COMPONENT
+  DEF     = 5
+  MIN_VAL = -500
+  MAX_VAL = 500
+  UNITS   = MIL_MICRON
+  GROUP   = Solderpaste Optimization
+  PROMPT  = Solderpaste Nonstandard Relative Value
+}
+
+FLOAT {
+  NAME    = .spo_p_fact
+  ENTITY  = FEATURE;COMPONENT
+  DEF     = 0.8
+  MIN_VAL = 0.3
+  MAX_VAL = 2.0
+  GROUP   = Solderpaste Optimization
+  PROMPT  = Solderpaste Nonstandard Factor Value
+}
+
+TEXT {
+  NAME    = .device_type
+  ENTITY  = COMPONENT;PACKAGE
+  MIN_LEN = 0
+  MAX_LEN = 64
+  GROUP   = Assembly
+  PROMPT  = Device Type
+}
+
+TEXT {
+  NAME    = .device_style
+  ENTITY  = COMPONENT;PACKAGE
+  MIN_LEN = 0
+  MAX_LEN = 64
+  GROUP   = Assembly
+  PROMPT  = Device Style
+}
+
+TEXT {
+  NAME    = .device_value
+  ENTITY  = COMPONENT;PACKAGE
+  MIN_LEN = 0
+  MAX_LEN = 64
+  GROUP   = Assembly
+  PROMPT  = Device Electrical Value
+}
+
+FLOAT {
+  NAME    = .device_value_ptol
+  ENTITY  = COMPONENT;PACKAGE
+  DEF     = 0.0
+  MIN_VAL = 0
+  MAX_VAL = 1000000
+  GROUP   = Assembly
+  PROMPT  = Device value positive tolerance
+}
+
+FLOAT {
+  NAME    = .device_value_ntol
+  ENTITY  = COMPONENT;PACKAGE
+  DEF     = 0.0
+  MIN_VAL = 0
+  MAX_VAL = 1000000
+  GROUP   = Assembly
+  PROMPT  = Device value negative tolerance
+}
+
+# GenCAD output Component Attributes
+TEXT {
+  NAME    = .gencad_device_type
+  ENTITY  = COMPONENT
+  MIN_LEN = 0
+  MAX_LEN = 64
+  GROUP   = GenCAD
+  PROMPT  = Device Type (GenCAD)
+}
+TEXT {
+  NAME    = .gencad_device_style
+  ENTITY  = COMPONENT
+  MIN_LEN = 0
+  MAX_LEN = 64
+  GROUP   = GenCAD
+  PROMPT  = Device Style (GenCAD)
+}
+TEXT {
+  NAME    = .gencad_device_value
+  ENTITY  = COMPONENT
+  MIN_LEN = 0
+  MAX_LEN = 64
+  GROUP   = GenCAD
+  PROMPT  = Device Electrical Value (GenCAD)
+}
+FLOAT {
+  NAME    = .gencad_device_ptol
+  ENTITY  = COMPONENT
+  DEF     = 0.0
+  MIN_VAL = 0
+  MAX_VAL = 1000000
+  GROUP   = GenCAD
+  PROMPT  = Device value positive tolerance (GenCAD)
+}
+FLOAT {
+  NAME    = .gencad_device_ntol
+  ENTITY  = COMPONENT
+  DEF     = 0.0
+  MIN_VAL = 0
+  MAX_VAL = 1000000
+  GROUP   = GenCAD
+  PROMPT  = Device value negative tolerance (GenCAD)
+}
+TEXT {
+  NAME    = .bond_name
+  ENTITY  = FEATURE
+  MIN_LEN = 0
+  MAX_LEN = 64
+  GROUP   = HDI
+  PROMPT  = Name of Wire Bond
+}
+TEXT {
+  NAME    = .bonding_profile
+  ENTITY  = FEATURE
+  MIN_LEN = 0
+  MAX_LEN = 64
+  GROUP   = HDI
+  PROMPT  = Bonding Profile
+}
+TEXT {
+  NAME    = .comp_name
+  ENTITY  = FEATURE
+  MIN_LEN = 0
+  MAX_LEN = 64
+  GROUP   = HDI
+  PROMPT  = Name of Die Component
+}
+OPTION {
+  NAME    = .ecmp_type
+  ENTITY  = FEATURE
+  OPTIONS = resistor;capacitor
+  GROUP   = Embedded Passives
+  PROMPT  = Embedded Passive Type
+}
+TEXT {
+  NAME    = .vpl1_pkg_name
+  ENTITY  = COMPONENT;PACKAGE
+  MIN_LEN = 0
+  MAX_LEN = 100
+  GROUP   = Component
+  PROMPT  = VPL Package name (VPL1)
+}
+TEXT {
+  NAME    = .pin_name
+  ENTITY  = FEATURE
+  MIN_LEN = 0
+  MAX_LEN = 64
+  GROUP   = HDI
+  PROMPT  = Name of Die Bump
+}

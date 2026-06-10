@@ -1,0 +1,20 @@
+#
+#Units
+#
+UNITS=INCH
+ID=17
+#
+#Num features
+#
+F 1
+#
+#Layer features
+#
+S P 0 ;;ID=48
+OB 0 0 I
+OS 0 1.377952755906
+OS 3.937007874016 1.377952755906
+OS 3.937007874016 0
+OS 0 0
+OE
+SE

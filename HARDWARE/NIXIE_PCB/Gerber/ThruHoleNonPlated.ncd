@@ -1,0 +1,22 @@
+; Version : LOCAL
+; Job     : X:\0_Projects\HW-0004_A.v1.0\Board2_PCB\Board2.pcb
+; User    : JG_PC:grobi
+; Date    : Sun May 31 16:30:58 2026
+; Format  : 2.4 / Absolute / Inch / Trailing
+; Contents: Thru / Drill / Non-Plated
+M48
+INCH,LZ
+FMAT,2
+ICI,OFF
+T01C0.0906
+%
+M72
+G90
+G93X0Y0
+T01
+X001378Y001378
+X037992
+Y012402
+X001378
+T00
+M30

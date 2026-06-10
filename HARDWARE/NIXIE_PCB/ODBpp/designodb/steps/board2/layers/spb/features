@@ -1,0 +1,76 @@
+#
+#Units
+#
+UNITS=INCH
+ID=35
+#
+#Num Features
+#
+F 16
+#
+#Feature symbol names
+#
+$0 rect51.181x70.866xr3.937
+$1 rect28.346x31.102xr5.906
+#
+#Feature attribute names
+#
+@0 .pad_usage
+@1 .test_point
+@2 .geometry
+@3 .smd
+@4 .nomenclature
+@5 .string
+@6 .drc_assembly_lyrs
+@7 .drc_board
+@8 .drc_comp_height
+@9 .drc_comp_keepin
+@10 .drc_comp_keepout
+@11 .drc_etch_lyrs
+@12 .drc_etch_lyrs_all
+@13 .drc_etch_lyrs_bit
+@14 .drc_max_height
+@15 .drc_min_height
+@16 .drc_pad_keepout
+@17 .drc_plane_keepout
+@18 .drc_ref_des
+@19 .drc_route_keepin
+@20 .drc_route_keepout
+@21 .drc_tp_keepin
+@22 .drc_tp_keepout
+@23 .drc_trace_keepout
+@24 .drc_via_keepout
+@25 .source_llayer
+@26 .tear_drop
+@27 .artwork
+@28 .pattern_fill
+@29 .hatch
+@30 .mount_hole
+@31 .tooling_hole
+@32 .testprobe_diameter
+@33 .rf
+@34 .padstack_id
+#
+#Feature attribute text strings
+#
+&0 SMD_1206
+&1 SMD_0603
+#
+#Layer features
+#
+P 1.259283464567 0.965070866142 0 P 0 7 ;0=0,2=0,34=713;ID=925
+P 1.259283464567 1.075070866142 0 P 0 7 ;0=0,2=0,34=715;ID=926
+P 2.050622047244 0.965070866142 0 P 0 7 ;0=0,2=0,34=717;ID=927
+P 2.050622047244 1.075070866142 0 P 0 7 ;0=0,2=0,34=719;ID=928
+P 2.860070866142 0.965165354331 0 P 0 7 ;0=0,2=0,34=725;ID=929
+P 2.860070866142 1.075165354331 0 P 0 7 ;0=0,2=0,34=727;ID=930
+P 3.629480314961 0.965220472441 0 P 0 7 ;0=0,2=0,34=729;ID=931
+P 3.629480314961 1.075220472441 0 P 0 7 ;0=0,2=0,34=731;ID=932
+P 2.2995 0.646456692913 1 P 0 4 ;0=0,2=1,34=746;ID=933
+P 2.2385 0.646456692913 1 P 0 4 ;0=0,2=1,34=748;ID=934
+P 1.895775590551 0.964488188976 1 P 0 6 ;0=0,2=1,34=802;ID=935
+P 1.956775590551 0.964488188976 1 P 0 6 ;0=0,2=1,34=804;ID=936
+P 2.2995 0.731181102362 1 P 0 4 ;0=0,2=1,34=806;ID=937
+P 2.2385 0.731181102362 1 P 0 4 ;0=0,2=1,34=808;ID=938
+P 0.470858267717 0.965401574803 0 P 0 7 ;0=0,2=0,34=840;ID=939
+P 0.470858267717 1.075401574803 0 P 0 7 ;0=0,2=0,34=842;ID=940

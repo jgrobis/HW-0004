@@ -1,0 +1,1240 @@
+UNITS=INCH
+
+BOOLEAN {
+  NAME    = .brk_point
+  ENTITY  = FEATURE
+  GROUP   = Mechanical
+  PROMPT  = Rout Break Point
+}
+
+BOOLEAN {
+  NAME    = .critical_net
+  ENTITY  = FEATURE;NET
+  GROUP   = SQA
+  PROMPT  = SQA Critical Net
+}
+
+BOOLEAN {
+  NAME    = .critical_tp
+  ENTITY  = FEATURE
+  GROUP   = Electrical
+  PROMPT  = Critical Netpoint
+}
+
+OPTION {
+  NAME    = .drill
+  ENTITY  = FEATURE
+  OPTIONS = plated;non_plated;via
+  GROUP   = Mechanical
+  PROMPT  = Drill Type
+}
+
+TEXT {
+  NAME    = .geometry
+  ENTITY  = FEATURE
+  MIN_LEN = 0
+  MAX_LEN = 500
+  GROUP   = EDA
+  PROMPT  = Geometry
+}
+
+BOOLEAN {
+  NAME    = .gold_plating
+  ENTITY  = FEATURE
+  GROUP   = Feature
+  PROMPT  = Gold Plating
+}
+
+BOOLEAN {
+  NAME    = .hatch
+  ENTITY  = FEATURE
+  GROUP   = EDA
+  PROMPT  = Hatch
+}
+
+BOOLEAN {
+  NAME    = .hatch_border
+  ENTITY  = FEATURE
+  GROUP   = EDA
+  PROMPT  = Hatch Border
+}
+
+BOOLEAN {
+  NAME    = .imp_line
+  ENTITY  = FEATURE
+  GROUP   = Feature
+  PROMPT  = Impedance Line
+}
+
+BOOLEAN {
+  NAME    = .is_capped
+  ENTITY  = FEATURE
+  GROUP   = OBSOLETE
+  PROMPT  = Capped Via
+}
+
+BOOLEAN {
+  NAME    = .mount_hole
+  ENTITY  = FEATURE
+  GROUP   = Mechanical
+  PROMPT  = Mounting Hole
+}
+
+BOOLEAN {
+  NAME    = .n_electric
+  ENTITY  = FEATURE
+  GROUP   = Electrical
+  PROMPT  = Non Electrical Feature
+}
+
+BOOLEAN {
+  NAME    = .net_point
+  ENTITY  = FEATURE
+  GROUP   = Electrical
+  PROMPT  = Internal Net Point
+}
+
+BOOLEAN {
+  NAME    = .nomenclature
+  ENTITY  = FEATURE
+  GROUP   = DFx Feature
+  PROMPT  = Copper Text
+}
+
+BOOLEAN {
+  NAME    = .non_tp
+  ENTITY  = FEATURE
+  GROUP   = DFx Feature
+  PROMPT  = Non Test Point
+}
+
+OPTION {
+  NAME    = .pad_usage
+  ENTITY  = FEATURE
+  OPTIONS = toeprint;via;g_fiducial;l_fiducial;tooling_hole;bond_finger
+  GROUP   = DFx Feature
+  PROMPT  = Pad Usage
+}
+
+BOOLEAN {
+  NAME    = .patch
+  ENTITY  = FEATURE
+  GROUP   = DFM Action
+  PROMPT  = Copper Patch
+}
+
+BOOLEAN {
+  NAME    = .pattern_fill
+  ENTITY  = FEATURE
+  GROUP   = DFM Action
+  PROMPT  = Copper Balancing
+}
+
+FLOAT {
+  NAME    = .pitch
+  ENTITY  = FEATURE
+  MIN_VAL = 0.0
+  MAX_VAL = 10000.0
+  GROUP   = OBSOLETE
+}
+
+OPTION {
+  NAME    = .plated_type
+  ENTITY  = FEATURE
+  OPTIONS = standard;press_fit
+  GROUP   = Electrical
+  PROMPT  = Through Hole Type
+}
+
+BOOLEAN {
+  NAME    = .shave
+  ENTITY  = FEATURE
+  GROUP   = DFM Action
+  PROMPT  = Silkscreen Shaved
+}
+
+BOOLEAN {
+  NAME    = .sliver_fill
+  ENTITY  = FEATURE
+  GROUP   = DFM Action
+  PROMPT  = Sliver Fill Patch
+}
+
+BOOLEAN {
+  NAME    = .smd
+  ENTITY  = FEATURE
+  GROUP   = DFx Feature
+  PROMPT  = SMD Pad
+}
+
+TEXT {
+  NAME    = .source_llayer
+  ENTITY  = FEATURE
+  MIN_LEN = 0
+  MAX_LEN = 64
+  GROUP   = EDA
+  PROMPT  = Source Layer
+}
+
+TEXT {
+  NAME    = .string
+  ENTITY  = FEATURE
+  MIN_LEN = 0
+  MAX_LEN = 1000
+  GROUP   = Feature
+  PROMPT  = Text String
+}
+FLOAT {
+  NAME    = .string_angle
+  ENTITY  = FEATURE
+  MIN_VAL = 0.0
+  MAX_VAL = 360.0
+  GROUP   = Feature
+  PROMPT  = String Angle
+}
+BOOLEAN {
+  NAME    = .string_mirrored
+  ENTITY  = FEATURE
+  DEF     = NO
+  GROUP   = Feature
+  PROMPT  = String Mirror
+}
+OPTION {
+  NAME    = .string_justification
+  ENTITY  = FEATURE
+  OPTIONS = tl;tc;tr;cl;cc;cr;bl;bc;br
+  DEF     = bl
+  GROUP   = Feature
+  PROMPT  = String Justification
+}
+
+
+BOOLEAN {
+  NAME    = .tear_drop
+  ENTITY  = FEATURE
+  GROUP   = Feature
+  PROMPT  = Tear Drop Feature
+}
+
+BOOLEAN {
+  NAME    = .test_point
+  ENTITY  = FEATURE
+  GROUP   = DFx Feature
+  PROMPT  = ICT Test Point
+}
+
+BOOLEAN {
+  NAME    = .tooling_hole
+  ENTITY  = FEATURE
+  GROUP   = Mechanical
+  PROMPT  = Tooling Hole
+}
+
+OPTION {
+  NAME    = .via_type
+  ENTITY  = FEATURE
+  OPTIONS = drilled;laser
+  GROUP   = Electrical
+  PROMPT  = Via Type
+}
+
+TEXT {
+  NAME     = .ipc_via_type_top
+  ENTITY  = FEATURE
+  OPTIONS = 1;2;3;4;5;6;7
+  DEF     = 0
+  MIN_LEN=0
+  MAX_LEN=100
+  GROUP   = FEATURE
+  PROMPT  = IPC 4761 top Via type 
+}
+
+TEXT {
+ NAME     = .ipc_via_type_bottom
+ ENTITY  = FEATURE
+ OPTIONS = 1;2;3;4;5;6;7
+ DEF     = 0
+ MIN_LEN=0
+ MAX_LEN=100
+ GROUP   = FEATURE
+ PROMPT  = IPC 4761 bottom Via type 
+}
+
+BOOLEAN {
+  NAME    = .via_in_pad
+  ENTITY  = FEATURE
+  GROUP   = Feature
+  PROMPT  = Via in Pad
+}
+
+INTEGER {
+  NAME    = .lyr_prf_ref
+  ENTITY  = FEATURE
+  DEF     = 0
+  MIN_VAL = 0
+  MAX_VAL = 100000
+  GROUP   = FEATURE
+  PROMPT  = Layer profile reference number
+}
+
+FLOAT {
+  NAME    = .comp_height_max
+  ENTITY  = COMPONENT;PACKAGE
+  MIN_VAL = 0.0
+  MAX_VAL = 10.0
+  UNITS   = INCH_MM
+  GROUP   = Component
+  PROMPT  = Maximal Height
+}
+
+FLOAT {
+  NAME    = .board_thickness
+  ENTITY  = JOB
+  MIN_VAL = 0.0
+  MAX_VAL = 10.0
+  DEF     = 0.0
+  UNITS   = INCH_MM
+  PROMPT  = Board Thickness
+}
+
+TEXT {
+  NAME    = .comment
+  ENTITY  = JOB;STEP;LAYER;WHEEL;SYMBOL;STACKUP
+  MIN_LEN = 0
+  MAX_LEN = 500
+  PROMPT  = Comment
+}
+
+TEXT {
+  NAME    = .customer
+  ENTITY  = JOB
+  MIN_LEN = 0
+  MAX_LEN = 100
+  PROMPT  = Customer
+}
+
+BOOLEAN {
+  NAME   = .drawing_outline
+  ENTITY = FEATURE
+  DEF    = NO
+  PROMPT = Draw as outline
+}
+
+BOOLEAN {
+  NAME   = .drawing_template
+  ENTITY = FEATURE
+  DEF    = NO
+  PROMPT = Drawing template feature
+}
+
+BOOLEAN {
+  NAME   = .drawing_profile
+  ENTITY = FEATURE
+  DEF    = NO
+  PROMPT = Drawing profile feature
+}
+
+FLOAT {
+  ENTITY = FEATURE
+  NAME   = .drawing_magnify
+  MIN_VAL = 0.0
+  MAX_VAL = 10000.0
+  DEF     = 1.0
+  PROMPT  = Drawing magnification
+}
+
+INTEGER {
+  NAME    = .design_origin_x
+  ENTITY  = JOB
+  DEF     = 0
+  MIN_VAL = -254000000
+  MAX_VAL = 254000000
+  PROMPT  = Design X Origin
+}
+INTEGER {
+  NAME    = .design_origin_y
+  ENTITY  = JOB
+  DEF     = 0
+  MIN_VAL = -254000000
+  MAX_VAL = 254000000
+  PROMPT  = Design Y Origin
+}
+
+OPTION {
+  NAME    = .primary_side
+  ENTITY  = JOB
+  OPTIONS = Top;Bottom
+  DEF     = Top
+  PROMPT  = Primary Side
+}
+
+TEXT {
+  NAME    = .technology
+  ENTITY  = JOB
+  MIN_LEN = 0
+  MAX_LEN = 100
+  PROMPT  = Technology
+}
+
+OPTION {
+  NAME    = .wheel_type
+  ENTITY  = WHEEL
+  OPTIONS = Gerber;Tools
+  DEF     = Gerber
+  PROMPT  = Wheel Type
+}
+
+BOOLEAN {
+  NAME    = .break_away
+  ENTITY  = SYMBOL;FEATURE
+  DEF     = NO
+  PROMPT  = Break Away
+}
+
+OPTION {
+  NAME    = .viacap_layer
+  ENTITY  = STEP
+  OPTIONS = Top;Bottom;Both;None
+  DEF     = None
+  PROMPT  = Via Capping on Layer
+  GROUP   = OBSOLETE
+}
+
+TEXT {
+  NAME    = .all_eda_layers
+  ENTITY  = STEP
+  MIN_LEN = 0
+  MAX_LEN = 1000
+  PROMPT  = All EDA Layers
+}
+
+TEXT {
+  NAME    = .inp_file
+  ENTITY  = LAYER
+  MIN_LEN = 0
+  MAX_LEN = 500
+  PROMPT  = Input File
+}
+
+TEXT {
+  NAME    = .eda_layers
+  ENTITY  = LAYER
+  MIN_LEN = 0
+  MAX_LEN = 1000
+  PROMPT  = All EDA Layers
+}
+
+BOOLEAN {
+  NAME    = .cu_base
+  ENTITY  = LAYER
+  DEF     = NO
+ PROMPT  = Vias need CU
+ GROUP   = OBSOLETE
+}
+
+FLOAT {
+  NAME    = .comp_height
+  ENTITY  = FEATURE;COMPONENT;PACKAGE
+  MIN_VAL = 0.0
+  MAX_VAL = 10.0
+  UNITS   = INCH_MM
+  GROUP   = Component
+  PROMPT  = Height
+}
+
+FLOAT {
+  NAME    = .comp_htol_plus
+  ENTITY  = COMPONENT;PACKAGE
+  MIN_VAL = 0.0
+  MAX_VAL = 10.0
+  UNITS   = INCH_MM
+  GROUP   = Component
+  PROMPT  = Height Tolerance Plus
+}
+FLOAT {
+  NAME    = .comp_htol_minus
+  ENTITY  = COMPONENT;PACKAGE
+  MIN_VAL = 0.0
+  MAX_VAL = 10.0
+  UNITS   = INCH_MM
+  GROUP   = Component
+  PROMPT  = Height Tolerance Minus
+}
+
+FLOAT {
+  NAME    = .comp_weight
+  ENTITY  = COMPONENT;PACKAGE
+  MIN_VAL = 0.0
+  MAX_VAL = 1000.0
+  GROUP   = Component
+  UNIT_TYPE = WEIGHT
+  PROMPT  = Weight
+}
+
+BOOLEAN {
+  NAME    = .is_buried
+  ENTITY  = COMPONENT;PACKAGE
+  DEF     = NO
+  GROUP   = Component
+  PROMPT  = Buried Component
+}
+
+BOOLEAN {
+  NAME    = .is_shield
+  ENTITY  = COMPONENT;PACKAGE
+  DEF     = NO
+  GROUP   = Component
+  PROMPT  = Shield
+}
+BOOLEAN {
+  NAME    = .is_wirebonded
+  ENTITY  = COMPONENT;PACKAGE
+  DEF     = NO
+  GROUP   = Component
+  PROMPT  = Wirebonded Component
+}
+
+OPTION {
+  NAME    = .test_potential
+  ENTITY  = FEATURE
+  OPTIONS = potential_tp_by_analysis;potential_tp_manually;not_potential_tp_manually
+  GROUP   = DFx Feature
+  PROMPT  = Test Point Potential
+}
+
+FLOAT {
+  NAME    = .layer_dielectric
+  ENTITY  = LAYER
+  MIN_VAL = 0.0
+  MAX_VAL = 0.5
+  DEF     = 0.0
+  UNITS   = INCH_MM
+  PROMPT  = Dielectric Thickness
+}
+
+FLOAT {
+  NAME    = .copper_weight
+  ENTITY  = LAYER
+  DEF     = 0.0
+  MIN_VAL = 0.0
+  MAX_VAL = 1000.0
+  UNIT_TYPE = COPPER_WEIGHT
+  PROMPT  = Copper Thickness
+}
+
+INTEGER {
+  NAME    = .polarity_marker
+  ENTITY  = COMPONENT;PACKAGE
+  DEF     = 1
+  MIN_VAL = 0
+  MAX_VAL = 100000
+  GROUP   = Component
+  PROMPT  = Pin One
+}
+
+FLOAT {
+  NAME    = .neutralization_angle
+  ENTITY  = COMPONENT;PACKAGE
+  MIN_VAL = 0.0
+  MAX_VAL = 360.0
+  GROUP   = Component
+  PROMPT  = Rotation Neutralization
+}
+
+BOOLEAN {
+  NAME    = .neutralization_reviewed
+  ENTITY  = COMPONENT;PACKAGE
+  GROUP   = Component
+  PROMPT  = Rotation Reviewed
+}
+
+TEXT {
+  NAME    = .neutralization_info
+  ENTITY  = STEP
+  MIN_LEN = 0
+  MAX_LEN = 200
+  PROMPT  = Neutralization Information
+}
+
+TEXT {
+  NAME    = .design_center
+  ENTITY  = JOB;STEP
+  MIN_LEN = 0
+  MAX_LEN = 100
+  PROMPT  = Design Center
+}
+
+TEXT {
+  NAME    = .neutralization_ss_layers
+  ENTITY  = STEP
+  MIN_LEN = 0
+  MAX_LEN = 200
+  PROMPT  = Neutralization Silkscreen
+}
+
+TEXT {
+  NAME    = .net_name
+  ENTITY  = FEATURE;LAYER
+  MIN_LEN = 0
+  MAX_LEN = 10000
+  GROUP   = SQA
+  PROMPT  = Net Name
+}
+
+BOOLEAN {
+  NAME    = .ignore_net
+  ENTITY  = NET
+  PROMPT  = Ignore Net During Allocation
+}
+
+OPTION {
+  NAME    = .layer_hdi_type
+  ENTITY  = LAYER
+  OPTIONS = Buildup;Core
+  DEF     = Buildup
+  PROMPT  = HDI Layer Type
+}
+
+BOOLEAN {
+  NAME    = .hatch_serrated_border
+  ENTITY  = FEATURE
+  GROUP   = EDA
+  PROMPT  = Hatch Serrated Border
+}
+
+TEXT {
+  NAME    = .net_type
+  ENTITY  = NET
+  MIN_LEN = 0
+  MAX_LEN = 64
+  PROMPT  = Net Type
+}
+
+OPTION {
+  NAME    = .sip
+  ENTITY  = FEATURE
+  OPTIONS = detected;repaired
+  GROUP   = DFM Action
+  PROMPT  = Self Intersecting Polygon
+}
+
+OPTION {
+  NAME    = .drill_layer_direction
+  ENTITY  = LAYER
+  OPTIONS = Top2Bottom;Bottom2Top;Any
+  DEF     = Top2Bottom
+  PROMPT  = Drill Layer Direction
+}
+
+TEXT {
+  NAME    = .net_physical_type
+  ENTITY  = FEATURE
+  MIN_LEN = 0
+  MAX_LEN = 64
+  GROUP   = SQA
+  PROMPT  = Net Physical Type
+}
+
+TEXT {
+  NAME    = .net_spacing_type
+  ENTITY  = FEATURE
+  MIN_LEN = 0
+  MAX_LEN = 64
+  GROUP   = SQA
+  PROMPT  = Net Spacing Type
+}
+
+BOOLEAN {
+  NAME    = .vcut
+  ENTITY  = FEATURE
+  GROUP   = Mechanical
+  PROMPT  = V-Score Edge
+}
+
+BOOLEAN {
+  NAME    = .moat
+  ENTITY  = FEATURE
+  GROUP   = Mechanical
+  PROMPT  = Moat Feature
+}
+
+TEXT {
+  NAME    = .artwork
+  ENTITY  = FEATURE
+  MIN_LEN = 0
+  MAX_LEN = 1000
+  GROUP   = Feature
+  PROMPT  = Feature Source
+}
+
+INTEGER {
+  NAME    = .eda_dimension_id
+  ENTITY  = FEATURE
+  DEF     = 0
+  MIN_VAL = 0
+  MAX_VAL = 100000
+  GROUP   = EDA
+  PROMPT  = CAD Dimension
+}
+
+TEXT {
+  NAME    = .fiducial_rdlist
+  ENTITY  = FEATURE
+  MIN_LEN = 0
+  MAX_LEN = 1000
+  GROUP   = Feature
+  PROMPT  = Local Fiducial Ref.Des. List
+}
+
+TEXT {
+  NAME    = .ecmp_name
+  ENTITY  = FEATURE
+  MIN_LEN = 0
+  MAX_LEN = 64
+  GROUP   = Embedded Passives
+  PROMPT  = Embedded Passive Name
+}
+
+FLOAT {
+  NAME    = .ecmp_value
+  ENTITY  = FEATURE
+  MIN_VAL = 0.0
+  MAX_VAL = 1000000.0
+  GROUP   = Embedded Passives
+  PROMPT  = Embedded Passive Nominal Value
+}
+FLOAT {
+  NAME    = .ecmp_min_value
+  ENTITY  = FEATURE
+  MIN_VAL = 0.0
+  MAX_VAL = 1000000.0
+  GROUP   = Embedded Passives
+  PROMPT  = Embedded Passive Min. Value
+}
+FLOAT {
+  NAME    = .ecmp_max_value
+  ENTITY  = FEATURE
+  MIN_VAL = 0.0
+  MAX_VAL = 1000000.0
+  GROUP   = Embedded Passives
+  PROMPT  = Embedded Passive Max. Value
+}
+
+OPTION {
+  NAME    = .ecmp_layer_tech
+  ENTITY  = LAYER
+  OPTIONS = none;additive;subtractive
+  DEF     = none
+  PROMPT  = Embedded Passive Technology
+}
+
+TEXT {
+  NAME    = .data_source
+  ENTITY  = JOB;STEP
+  MIN_LEN = 0
+  MAX_LEN = 100
+  PROMPT  = Data Source
+}
+
+OPTION {
+  NAME    = .comp_polarity
+  ENTITY  = COMPONENT;PACKAGE
+  OPTIONS = polarized;non_polarized
+  GROUP   = Component
+  PROMPT  = Polarity
+}
+
+BOOLEAN {
+  NAME    = .no_pop
+  ENTITY  = COMPONENT;PACKAGE
+  DEF     = NO
+  GROUP   = Component
+  PROMPT  = Not Populated per BOM
+}
+
+TEXT {
+  NAME    = .user_bom_rev
+  ENTITY  = COMPONENT;PACKAGE
+  MIN_LEN = 0
+  MAX_LEN = 1000
+  GROUP   = Component
+  PROMPT  = User Define Extension
+}
+
+TEXT {
+  NAME    = .cad_part_override
+  ENTITY  = COMPONENT;PACKAGE
+  MIN_LEN = 0
+  MAX_LEN = 64
+  GROUP   = Component
+  PROMPT  = CAD Part Variant Support
+}
+
+TEXT {
+  NAME    = .package_version
+  ENTITY  = COMPONENT;PACKAGE
+  MIN_LEN = 0
+  MAX_LEN = 50
+  GROUP   = Component
+  PROMPT  = Zuken Package Info
+}
+
+BOOLEAN {
+  NAME    = .mechanical
+  ENTITY  = COMPONENT;PACKAGE
+  GROUP   = Component
+  PROMPT  = Mechanical part
+}
+
+INTEGER {
+  NAME    = .comp_height_area
+  ENTITY  = FEATURE;COMPONENT;PACKAGE
+  DEF     = 0
+  MIN_VAL = 0
+  MAX_VAL = 1000000
+  GROUP   = EDA
+  PROMPT  = Allegro Height ID
+}
+
+TEXT {
+  NAME    = .desc1
+  ENTITY  = COMPONENT;PACKAGE
+  MIN_LEN = 0
+  MAX_LEN = 1000
+  GROUP   = Component
+  PROMPT  = General Description 1
+}
+TEXT {
+  NAME    = .desc2
+  ENTITY  = COMPONENT;PACKAGE
+  MIN_LEN = 0
+  MAX_LEN = 1000
+  GROUP   = Component
+  PROMPT  = General Description 2
+}
+TEXT {
+  NAME    = .desc3
+  ENTITY  = COMPONENT;PACKAGE
+  MIN_LEN = 0
+  MAX_LEN = 1000
+  GROUP   = Component
+  PROMPT  = General Description 3
+}
+TEXT {
+  NAME    = .desc4
+  ENTITY  = COMPONENT;PACKAGE
+  MIN_LEN = 0
+  MAX_LEN = 1000
+  GROUP   = Component
+  PROMPT  = General Description 4
+}
+TEXT {
+  NAME    = .desc5
+  ENTITY  = COMPONENT;PACKAGE
+  MIN_LEN = 0
+  MAX_LEN = 1000
+  GROUP   = Component
+  PROMPT  = General Description 5
+}
+TEXT {
+  NAME    = .desc6
+  ENTITY  = COMPONENT;PACKAGE
+  MIN_LEN = 0
+  MAX_LEN = 1000
+  GROUP   = Component
+  PROMPT  = General Description 6
+}
+TEXT {
+  NAME    = .desc7
+  ENTITY  = COMPONENT;PACKAGE
+  MIN_LEN = 0
+  MAX_LEN = 1000
+  GROUP   = Component
+  PROMPT  = General Description 7
+}
+TEXT {
+  NAME    = .desc8
+  ENTITY  = COMPONENT;PACKAGE
+  MIN_LEN = 0
+  MAX_LEN = 1000
+  GROUP   = Component
+  PROMPT  = General Description 8
+}
+TEXT {
+  NAME    = .desc9
+  ENTITY  = COMPONENT;PACKAGE
+  MIN_LEN = 0
+  MAX_LEN = 1000
+  GROUP   = Component
+  PROMPT  = General Description 9
+}
+TEXT {
+  NAME    = .desc10
+  ENTITY  = COMPONENT;PACKAGE
+  MIN_LEN = 0
+  MAX_LEN = 1000
+  GROUP   = Component
+  PROMPT  = General Description 10
+}
+
+TEXT {
+  NAME    = .part_desc1
+  ENTITY  = COMPONENT;PACKAGE
+  MIN_LEN = 0
+  MAX_LEN = 1000
+  GROUP   = Component
+  PROMPT  = Part Description 1
+}
+TEXT {
+  NAME    = .part_desc2
+  ENTITY  = COMPONENT;PACKAGE
+  MIN_LEN = 0
+  MAX_LEN = 1000
+  GROUP   = Component
+  PROMPT  = Part Description 2
+}
+TEXT {
+  NAME    = .part_desc3
+  ENTITY  = COMPONENT;PACKAGE
+  MIN_LEN = 0
+  MAX_LEN = 1000
+  GROUP   = Component
+  PROMPT  = Part Description 3
+}
+TEXT {
+  NAME    = .part_desc4
+  ENTITY  = COMPONENT;PACKAGE
+  MIN_LEN = 0
+  MAX_LEN = 1000
+  GROUP   = Component
+  PROMPT  = Part Description 4
+}
+TEXT {
+  NAME    = .part_desc5
+  ENTITY  = COMPONENT;PACKAGE
+  MIN_LEN = 0
+  MAX_LEN = 1000
+  GROUP   = Component
+  PROMPT  = Part Description 5
+}
+TEXT {
+  NAME    = .part_desc6
+  ENTITY  = COMPONENT;PACKAGE
+  MIN_LEN = 0
+  MAX_LEN = 1000
+  GROUP   = Component
+  PROMPT  = Part Description 6
+}
+TEXT {
+  NAME    = .part_desc7
+  ENTITY  = COMPONENT;PACKAGE
+  MIN_LEN = 0
+  MAX_LEN = 1000
+  GROUP   = Component
+  PROMPT  = Part Description 7
+}
+TEXT {
+  NAME    = .part_desc8
+  ENTITY  = COMPONENT;PACKAGE
+  MIN_LEN = 0
+  MAX_LEN = 1000
+  GROUP   = Component
+  PROMPT  = Part Description 8
+}
+TEXT {
+  NAME    = .part_desc9
+  ENTITY  = COMPONENT;PACKAGE
+  MIN_LEN = 0
+  MAX_LEN = 1000
+  GROUP   = Component
+  PROMPT  = Part Description 9
+}
+TEXT {
+  NAME    = .part_desc10
+  ENTITY  = COMPONENT;PACKAGE
+  MIN_LEN = 0
+  MAX_LEN = 1000
+  GROUP   = Component
+  PROMPT  = Part Description 10
+}
+
+TEXT {
+  NAME    = .diff_pair
+  ENTITY  = NET
+  MIN_LEN = 0
+  MAX_LEN = 64
+  PROMPT  = Differential Pair
+}
+
+TEXT {
+  NAME    = .testpoint_name
+  ENTITY  = FEATURE
+  MIN_LEN = 0
+  MAX_LEN = 64
+  GROUP   = Feature
+  PROMPT  = Test Point Name
+}
+
+TEXT {
+  NAME    = .variant_list
+  ENTITY  = JOB
+  MIN_LEN = 0
+  MAX_LEN = 1000
+  PROMPT  = Job Variant List
+}
+
+TEXT {
+  NAME    = .comp_variant_list
+  ENTITY  = COMPONENT;PACKAGE
+  MIN_LEN = 0
+  MAX_LEN = 1000
+  GROUP   = Component
+  PROMPT  = Component Variant List
+}
+
+BOOLEAN {
+  NAME    = .cad_local_footprint_change
+  ENTITY  = COMPONENT;PACKAGE
+  DEF     = NO
+  GROUP   = Component
+  PROMPT  = CADStar Pad Change
+}
+
+TEXT {
+  NAME    = .cad_package_name
+  ENTITY  = COMPONENT;PACKAGE
+  MIN_LEN = 0
+  MAX_LEN = 10000
+  GROUP   = Component
+  PROMPT  = CADStar Package Name
+}
+
+TEXT {
+  NAME    = .current_variant
+  ENTITY  = STEP
+  MIN_LEN = 0
+  MAX_LEN = 100
+  PROMPT  = Current Variant
+}
+
+BOOLEAN {
+  NAME    = .pf_optimized
+  ENTITY  = FEATURE
+  GROUP   = EDA
+  PROMPT  = Padstack optimized after NFP removal
+}
+
+FLOAT {
+  NAME    = .z0impedance
+  ENTITY  = LAYER
+  MIN_VAL = 0.0
+  MAX_VAL = 10000
+  DEF     = 0.0
+  UNIT_TYPE = RESISTANCE
+  PROMPT  = Characteristic Impedance
+}
+
+FLOAT   {
+  NAME    = .dielectric_constant
+  ENTITY  = LAYER
+  DEF     = 0.0
+  MIN_VAL = 0.0
+  MAX_VAL = 1000.0
+  PROMPT  = Dielectric Constant (ER)
+}
+
+FLOAT {
+  NAME    = .bulk_resistivity
+  ENTITY  = LAYER
+  DEF     = 0.0
+  MIN_VAL = 0.0
+  MAX_VAL = 100000
+  UNITS   = NANO_OHM
+  UNIT_TYPE = RESISTANCE
+  PROMPT  = Bulk Resistivity
+}
+
+FLOAT {
+  NAME    = .loss_tangent
+  ENTITY  = LAYER
+  DEF     = 0.0
+  MIN_VAL = 0.0
+  MAX_VAL = 100.0
+  PROMPT  = Loss Tangent
+}
+
+FLOAT   {
+  NAME    = .thickness_over_cu
+  ENTITY  = JOB
+  DEF     = 1.0
+  MIN_VAL = 1.0
+  MAX_VAL = 1000.0
+  UNITS   = MIL_MICRON
+  PROMPT  = Total Thickness over Copper
+}
+FLOAT {
+  NAME    = .thickness_over_sm
+  ENTITY  = JOB
+  DEF     = 1.0
+  MIN_VAL = 1.0
+  MAX_VAL = 1000.0
+  UNITS   = MIL_MICRON
+  PROMPT  = Total Thickness over Soldermask
+}
+
+FLOAT {
+  NAME    = .testprobe_diameter
+  ENTITY  = FEATURE
+  GROUP   = Testing
+  DEF     = 30
+  MIN_VAL = 10
+  MAX_VAL = 100
+  UNITS   = MIL_MICRON
+  PROMPT  = Test Point Diameter
+}
+TEXT {
+  NAME    = .merge_processes
+  ENTITY  = STEP
+  MIN_LEN = 0
+  MAX_LEN = 64
+  PROMPT  = Assembly Merge Processes
+}
+FLOAT {
+  NAME    = .centroid_correction_x
+  ENTITY  = COMPONENT;PACKAGE
+  MIN_VAL = -100
+  MAX_VAL = 100
+  UNITS   = INCH_MM
+  GROUP   = Component
+  PROMPT  = Centroid Correction X
+}
+
+FLOAT {
+  NAME    = .centroid_correction_y
+  ENTITY  = COMPONENT;PACKAGE
+  MIN_VAL = -100
+  MAX_VAL = 100
+  UNITS   = INCH_MM
+  GROUP   = Component
+  PROMPT  = Centroid Correction Y
+}
+
+OPTION {
+  NAME    = .ipc_class 
+  ENTITY  = JOB
+  OPTIONS = Class1;Class2;Class3
+  DEF     = Class1
+  PROMPT  = IPC Performance Class
+}
+
+OPTION {
+  NAME    = .producibility_level 
+  ENTITY  = JOB
+  OPTIONS = LevelA;LevelB;LevelC
+  DEF     = LevelB
+  PROMPT  = IPC-7351 Density Level
+}
+
+BOOLEAN {
+  NAME    = .plug_vias
+  ENTITY  = STEP
+  PROMPT  = Plug Vias
+  GROUP   = OBSOLETE
+}
+
+BOOLEAN {
+  NAME    = .via_tenting
+  ENTITY  = STEP
+  PROMPT  = Via Tenting
+  GROUP   = OBSOLETE
+}
+
+BOOLEAN {
+  NAME    = .teardrop_addition_allowed_on_inner
+  ENTITY  = STEP
+  PROMPT  = Teardrop Addition Allowed on Inner
+}
+
+BOOLEAN {
+  NAME    = .teardrop_addition_allowed_on_outer
+  ENTITY  = STEP
+  PROMPT  = Teardrop Addition Allowed on Outer
+}
+
+BOOLEAN {
+  NAME    = .allowed_to_remove_non_functional_pads
+  ENTITY  = STEP
+  PROMPT  = Allowed to Remove non-functional Pads
+}
+
+OPTION {
+  NAME    = .gold_plating_defined_by 
+  ENTITY  = STEP
+  OPTIONS = GoldMask;SolderMask;N/A
+  DEF     = GoldMask
+  PROMPT  = Gold Plating Defined by
+}
+
+BOOLEAN {
+  NAME    = .rout_plated
+  ENTITY  = FEATURE
+  GROUP   = ROUT
+  PROMPT  = Plated rout
+}
+
+
+INTEGER {
+  NAME    = .imp_constraint_id
+  ENTITY  = FEATURE
+  MAX_VAL = 2147483647
+  MIN_VAL = 0
+  GROUP   = Electric
+  PROMPT  = Impedance Constraint ID
+}
+
+INTEGER {
+  NAME    = .imp_polyline_id
+  ENTITY  = FEATURE
+  GROUP   = Electric
+  MAX_VAL = 2147483647
+  MIN_VAL = 0
+  PROMPT  = Impedance Polyline ID
+}
+
+INTEGER {
+  NAME    = .padstack_id
+  ENTITY  = FEATURE
+  GROUP   = DFx Feature
+  MAX_VAL = 2147483647
+  MIN_VAL = 0
+  PROMPT  = Padstack ID
+}
+
+BOOLEAN {
+  NAME    = .eda_define_imp_line
+  ENTITY  = FEATURE
+  GROUP   = DFx Feature
+  PROMPT  = Defines lines controlled by impedance.
+}
+
+BOOLEAN {
+  NAME    = .soldermask_define_no_edits
+  ENTITY  = FEATURE
+  GROUP   = DFx Feature
+  PROMPT  = Defines the exposed copper region.
+}
+
+FLOAT {
+  NAME    = .impedance_test_width
+  ENTITY  = LAYER
+  MIN_VAL = 0.0
+  UNITS   = MIL_MICRON
+  PROMPT  = Impedance test width
+}
+TEXT {
+  NAME    = .eco
+  ENTITY  = STEP
+  MIN_LEN = 0
+  MAX_LEN = 100
+  PROMPT  = Engineering Change List
+}

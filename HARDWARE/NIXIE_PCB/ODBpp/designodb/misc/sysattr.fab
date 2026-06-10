@@ -1,0 +1,452 @@
+UNITS=INCH
+
+INTEGER {
+  NAME    = .aoi_cpbm
+  ENTITY  = FEATURE
+  DEF     = 0
+  MIN_VAL = 0
+  MAX_VAL = 255
+  GROUP   = OBSOLETE
+  PROMPT  = .aoi_cpbm
+}
+
+INTEGER {
+  NAME    = .aoi_cpcu
+  ENTITY  = FEATURE
+  DEF     = 0
+  MIN_VAL = 0
+  MAX_VAL = 255
+  GROUP   = OBSOLETE
+  PROMPT  = .aoi_cpcu
+}
+
+INTEGER {
+  NAME    = .aoi_drbm
+  ENTITY  = FEATURE
+  DEF     = 0
+  MIN_VAL = 0
+  MAX_VAL = 255
+  GROUP   = OBSOLETE
+  PROMPT  = .aoi_drbm
+}
+
+INTEGER {
+  NAME    = .aoi_drcu
+  ENTITY  = FEATURE
+  DEF     = 0
+  MIN_VAL = 0
+  MAX_VAL = 255
+  GROUP   = OBSOLETE
+  PROMPT  = .aoi_drcu
+}
+
+INTEGER {
+  NAME    = .aoi_value
+  ENTITY  = FEATURE
+  DEF     = 0
+  MIN_VAL = 0
+  MAX_VAL = 10000
+  GROUP   = OBSOLETE
+  PROMPT  = aoi value
+}
+
+OPTION {
+  NAME    = .comp
+  ENTITY  = FEATURE
+  OPTIONS = none;right;left
+  GROUP   = Feature
+  PROMPT  = Rout Compensate
+}
+
+TEXT {
+  NAME    = .bit
+  ENTITY  = FEATURE
+  MIN_LEN = 0
+  MAX_LEN = 64
+  GROUP   = Mechanical
+  PROMPT  = Drill Designator
+}
+
+FLOAT {
+  NAME    = .out_comp
+  ENTITY  = LAYER
+  DEF     = 0.0
+  MIN_VAL = -100.0
+  MAX_VAL = 100.0
+  PROMPT  = Output Compensation
+}
+
+INTEGER {
+  NAME    = .cut_line
+  ENTITY  = FEATURE
+  DEF     = 0
+  MIN_VAL = 0
+  MAX_VAL = 100000
+  GROUP   = DFM Action
+  PROMPT  = Film Optimization Cut Line
+}
+
+INTEGER {
+  NAME    = .drill_flag
+  ENTITY  = FEATURE
+  DEF     = 0
+  MIN_VAL = 0
+  MAX_VAL = 100000
+  GROUP   = OBSOLETE
+  PROMPT  = Auto Drill Mgr Flag
+}
+
+BOOLEAN {
+  NAME    = .drill_noopt
+  ENTITY  = FEATURE
+  GROUP   = OBSOLETE
+  PROMPT  = Auto Drill No Opt
+}
+
+OPTION {
+  NAME    = .drill_sr_zero
+  ENTITY  = FEATURE
+  OPTIONS = 1;2;3
+  GROUP   = OBSOLETE
+  PROMPT  = Auto Drill S&R Offset
+}
+
+OPTION {
+  NAME    = .drill_stage
+  ENTITY  = FEATURE
+  OPTIONS = 1;2;3
+  GROUP   = OBSOLETE
+  PROMPT  = Auto Drill Mgr Stage
+}
+
+BOOLEAN {
+  NAME    = .et_align
+  ENTITY  = FEATURE
+  GROUP   = Feature
+  PROMPT  = Probot Alignment Targets
+}
+
+INTEGER {
+  NAME    = .extended
+  ENTITY  = FEATURE
+  DEF     = 0
+  MIN_VAL = -1
+  MAX_VAL = 100000
+  GROUP   = Mechanical
+  PROMPT  = Dimension Feature
+}
+
+INTEGER {
+  NAME    = .feed
+  ENTITY  = FEATURE
+  DEF     = 0
+  MIN_VAL = 0
+  MAX_VAL = 100000
+  GROUP   = Mechanical
+  PROMPT  = Rout Feed Rate
+}
+
+TEXT {
+  NAME    = .fiducial_name
+  ENTITY  = FEATURE
+  MIN_LEN = 0
+  MAX_LEN = 64
+  GROUP   = Feature
+  PROMPT  = Etec Fiducial Output
+}
+
+BOOLEAN {
+  NAME    = .foot_down
+  ENTITY  = FEATURE
+  DEF     = NO
+  PROMPT  = Foot Down
+  GROUP   = OBSOLETE
+  PROMPT  = Auto Rout Footdown
+}
+
+BOOLEAN {
+  NAME    = .full_plane
+  ENTITY  = FEATURE
+  GROUP   = OBSOLETE
+}
+
+BOOLEAN {
+  NAME    = .lpol_surf
+  ENTITY  = FEATURE
+  DEF     = NO
+  PROMPT  = Surface created by layer polarity reduction algorithm
+  GROUP   = Feature
+  PROMPT  = Polarity Optimization
+}
+
+BOOLEAN {
+  NAME    = .orbotech_plot_stamp
+  ENTITY  = FEATURE
+  DEF     = NO
+  GROUP   = Feature
+  PROMPT  = Orbotech Plot Stamp
+}
+
+BOOLEAN {
+  NAME    = .out_orig
+  ENTITY  = FEATURE
+  GROUP   = OBSOLETE
+  PROMPT  = Rout Output Origin
+}
+
+INTEGER {
+  NAME    = .pilot_hole
+  ENTITY  = FEATURE
+  DEF     = 0
+  MIN_VAL = 0
+  MAX_VAL = 100000
+  GROUP   = Mechanical
+  PROMPT  = Rout Pilot Hole
+}
+
+INTEGER {
+  NAME    = .rout_chain
+  ENTITY  = FEATURE
+  DEF     = 0
+  MIN_VAL = 0
+  MAX_VAL = 100000
+  GROUP   = Mechanical
+  PROMPT  = Rout Chain
+}
+
+INTEGER {
+  NAME    = .rout_flag
+  ENTITY  = FEATURE
+  DEF     = 0
+  MIN_VAL = 0
+  MAX_VAL = 100000
+  GROUP   = Mechanical
+  PROMPT  = Rout Flag
+}
+
+INTEGER {
+  NAME    = .speed
+  ENTITY  = FEATURE
+  DEF     = 0
+  MIN_VAL = 0
+  MAX_VAL = 100000
+  GROUP   = Mechanical
+  PROMPT  = Rout Spindle Speed
+}
+
+TEXT {
+  NAME    = .global_camtek_aoiset
+  ENTITY  = JOB
+  MIN_LEN = 0
+  MAX_LEN = 80
+  PROMPT  = Global CAMTEK aoi-set
+}
+
+BOOLEAN {
+  NAME    = .out_break
+  ENTITY  = FEATURE;SYMBOL
+  DEF     = NO
+  GROUP   = Feature
+  PROMPT  = Output Break
+}
+
+BOOLEAN {
+  NAME    = .out_scale
+  ENTITY  = FEATURE;SYMBOL
+  DEF     = NO
+  GROUP   = Feature
+  PROMPT  = Output Scale
+}
+
+FLOAT {
+  NAME    = .fill_dx
+  ENTITY  = SYMBOL
+  DEF     = 0.1
+  MIN_VAL = 0.000001
+  MAX_VAL = 50.0
+  UNITS   = INCH_MM
+  PROMPT  = Fill Dx
+}
+FLOAT {
+  NAME    = .fill_dy
+  ENTITY  = SYMBOL
+  DEF     = 0.1
+  MIN_VAL = 0.000001
+  MAX_VAL = 50.0
+  UNITS   = INCH_MM
+  PROMPT  = Fill Dy
+}
+FLOAT {
+  NAME    = .image_dx
+  ENTITY  = SYMBOL
+  DEF     = -1.0
+  MIN_VAL = -1.0
+  MAX_VAL = 50.0
+  UNITS   = INCH_MM
+  PROMPT  = Image Dx
+}
+FLOAT {
+  NAME    = .image_dy
+  ENTITY  = SYMBOL
+  DEF     = -1.0
+  MIN_VAL = -1.0
+  MAX_VAL = 50.0
+  UNITS   = INCH_MM
+  PROMPT  = Image Dy
+}
+
+TEXT {
+  NAME    = .out_name
+  ENTITY  = STEP
+  MIN_LEN = 0
+  MAX_LEN = 64
+  PROMPT  = Output Name
+}
+
+INTEGER {
+  NAME    = .out_drill_order
+  ENTITY  = STEP
+  DEF     = 0
+  MIN_VAL = -10000
+  MAX_VAL = 10000
+  PROMPT  = Output Drill Order
+}
+
+INTEGER {
+  NAME    = .out_flag
+  ENTITY  = FEATURE
+  DEF     = -1
+  MIN_VAL = -1
+  MAX_VAL = 1000000
+  PROMPT  = Out flag
+}
+
+BOOLEAN {
+  NAME    = .out_drill_full
+  ENTITY  = STEP
+  DEF     = NO
+  PROMPT  = Output Drill Full
+}
+
+BOOLEAN {
+  NAME    = .out_drill_optional
+  ENTITY  = FEATURE;STEP
+  DEF     = NO
+  GROUP   = Feature
+  PROMPT  = Output Drill Optional
+}
+
+INTEGER {
+  NAME    = .out_rout_order
+  ENTITY  = STEP
+  DEF     = 0
+  MIN_VAL = -10000
+  MAX_VAL = 10000
+  PROMPT  = Output Rout Order
+}
+
+BOOLEAN {
+  NAME    = .out_rout_optional
+  ENTITY  = FEATURE;STEP
+  DEF     = NO
+  GROUP   = Feature
+  PROMPT  = Output Rout Optional
+}
+
+BOOLEAN {
+  NAME    = .array_with_rotation
+  ENTITY  = STEP
+  DEF     = NO
+  PROMPT  = Array with Rotation
+}
+
+FLOAT {
+  NAME    = .out_x_scale
+  ENTITY  = LAYER
+  DEF     = 1.0
+  MIN_VAL = 0.000001
+  MAX_VAL = 5.0
+  PROMPT  = Output X Scale
+}
+FLOAT {
+  NAME    = .out_y_scale
+  ENTITY  = LAYER
+  DEF     = 1.0
+  MIN_VAL = 0.000001
+  MAX_VAL = 5.0
+  PROMPT  = Output Y Scale
+}
+
+OPTION {
+  NAME    = .out_angle
+  ENTITY  = LAYER
+  OPTIONS = 0.0;90.0;180.0;270.0
+  DEF     = 0.0
+  PROMPT  = Output Angle
+}
+
+BOOLEAN {
+  NAME    = .out_mirror
+  ENTITY  = LAYER
+  DEF     = NO
+  PROMPT  = Output Mirror
+}
+
+OPTION {
+  NAME    = .out_polarity
+  ENTITY  = LAYER
+  OPTIONS = Positive;Negative
+  DEF     = Positive
+  PROMPT  = Output Polarity
+}
+
+FLOAT {
+  NAME    = .et_adjacency
+  ENTITY  = LAYER
+  DEF     = 20.0
+  MIN_VAL = 0.0
+  MAX_VAL = 1000.0
+  UNITS   = MIL_MICRON
+  PROMPT  = Adjacency Distance (ET)
+}
+
+BOOLEAN {
+  NAME    = .lpol_done
+  ENTITY  = LAYER
+  DEF     = NO
+  PROMPT  = Polarity Order was Done
+}
+
+INTEGER {
+  NAME    = .drc_min_space
+  ENTITY  = MANIA-AOI
+  DEF     = 5
+  MIN_VAL = 1
+  MAX_VAL = 100
+  PROMPT  = Min Spacing
+}
+
+INTEGER {
+  NAME    = .drc_min_width
+  ENTITY  = MANIA-AOI
+  DEF     = 7
+  MIN_VAL = 1
+  MAX_VAL = 100
+  PROMPT  = Min Track Width
+}
+
+INTEGER {
+  NAME    = .drc_add_rad
+  ENTITY  = MANIA-AOI
+  DEF     = 2
+  MIN_VAL = 0
+  MAX_VAL = 100
+  PROMPT  = Enlarge by
+}
+TEXT {
+  NAME    = .backdrill_penetrate_stop_layer
+  ENTITY  = LAYER
+  MIN_LEN = 0
+  MAX_LEN = 64
+  PROMPT  = Backdrill not Penetrate Layer Name 
+}

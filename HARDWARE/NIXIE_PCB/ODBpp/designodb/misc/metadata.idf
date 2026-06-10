@@ -1,0 +1,40 @@
+<metadata>
+	<header>
+		<node name="designer_name" display="Designer Name" value="grobi" />
+		<node name="layer_count" display="Layer Count" value="2" />
+	</header>
+	<requirements>
+		<node name="board_thickness" display="Board Thickness" units="inch" value="0.0626" />
+	</requirements>
+	<steps>
+		<step name="board2" description="">
+			<requirements>
+				<node name="plated_slots" display="Plated Slots" value="no" />
+				<node name="soldermask_sides" display="Solder Mask Sides" value="both" />
+			</requirements>
+			<manufacturing>
+				<node name="smallest_drill_size" display="Smallest Drill Size" units="inch" value="0.015748031496" />
+				<node name="number_of_drill_holes" display="Number of Drill Holes" value="99" />
+				<node name="number_of_unique_drill_sizes" display="Number of Unique Drill Sizes" value="4" />
+				<node name="number_of_vias" display="Number of Vias" value="0" />
+				<node name="smallest_trace_width" display="Smallest Trace Width" units="inch" value="0.01968503937" />
+				<node name="smallest_via_diameter" display="Smallest Via Diameter" units="inch" value="0" />
+			</manufacturing>
+			<assembly>
+				<node name="number_of_fiducials" display="Number of Fiducials" value="0" />
+				<node name="smd_technology" display="SMD Technology" value="double sided" />
+				<node name="number_of_nets" display="Number of Nets" value="39" />
+				<node name="number_of_test_points" display="Number of Test_Points" value="0" />
+				<node name="component_count" display="Component Count" value="18">
+					<classify_by name="top" display="Components in Top Layer" value="10">
+						<classify_by name="Discrete_Axial" value="5" />
+						<classify_by name="Connector" value="5" />
+					</classify_by>
+					<classify_by name="bottom" display="Components in Bottom Layer" value="8">
+						<classify_by name="General" value="8" />
+					</classify_by>
+				</node>
+			</assembly>
+		</step>
+	</steps>
+</metadata>

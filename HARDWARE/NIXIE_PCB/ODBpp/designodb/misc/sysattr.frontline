@@ -1,0 +1,1321 @@
+UNITS=INCH
+
+OPTION {
+  NAME    = .action_mask_layer_type
+  ENTITY  = LAYER
+  OPTIONS = Exclude;Include
+  DEF     = Exclude
+  PROMPT  = Use Action Mask Layer To
+}
+TEXT {
+  NAME    = .action_mask_layer
+  ENTITY  = LAYER
+  MIN_LEN = 0
+  MAX_LEN = 1000
+  PROMPT  = Action Mask Layer
+}
+BOOLEAN {
+  NAME    = .area
+  ENTITY  = FEATURE
+  PROMPT  = Area definition
+}
+TEXT {
+  NAME    = .attached_f_attr
+  ENTITY  = SYMBOL
+  MIN_LEN = 0
+  MAX_LEN = 1000
+  PROMPT  = Attached feature attr
+}
+BOOLEAN {
+  NAME    = .avoid_pattern_fill
+  ENTITY  = FEATURE
+  PROMPT  = Avoid Pattern fill
+}
+BOOLEAN {
+  NAME    = .avoid_shave
+  ENTITY  = FEATURE
+  PROMPT  = Avoid shaves
+}
+INTEGER {
+  NAME    = .barcode_astr
+  ENTITY  = SYMBOL
+  DEF     = 1
+  MIN_VAL = 0
+  MAX_VAL = 1
+  PROMPT  = Barcode with text
+}
+INTEGER {
+  NAME    = .barcode_astr_pos
+  ENTITY  = SYMBOL
+  DEF     = 1
+  MIN_VAL = 0
+  MAX_VAL = 1
+  PROMPT  = Barcode text position
+}
+INTEGER {
+  NAME    = .barcode_bg
+  ENTITY  = SYMBOL
+  DEF     = 1
+  MIN_VAL = 0
+  MAX_VAL = 1
+  PROMPT  = Barcode background
+}
+INTEGER {
+  NAME    = .barcode_marks
+  ENTITY  = SYMBOL
+  DEF     = 1
+  MIN_VAL = 0
+  MAX_VAL = 1
+  PROMPT  = Barcode with marks
+}
+TEXT {
+  NAME    = .barcode_matrix
+  ENTITY  = SYMBOL
+  MIN_LEN = 0
+  MAX_LEN = 100
+  PROMPT  = Barcode matrix
+}
+OPTION {
+  NAME    = .barcode_type
+  ENTITY  = SYMBOL
+  OPTIONS = NotDef;Code128B;Code128C;ECC-200
+  DEF     = NotDef
+  PROMPT  = Barcode type
+}
+BOOLEAN {
+  NAME    = .bga
+  ENTITY  = FEATURE
+  PROMPT  = BGA feature
+}
+BOOLEAN {
+  NAME    = .bonding_pad_comp
+  ENTITY  = FEATURE
+  PROMPT  = Bonding pad compensation
+}
+BOOLEAN {
+  NAME    = .canned_text
+  ENTITY  = FEATURE
+  DEF     = NO
+  PROMPT  = Canned text
+}
+OPTION {
+  NAME    = .cdr_drill_type
+  ENTITY  = LAYER
+  OPTIONS = Unset;Laser;Photo;Through;Blind
+  DEF     = Unset
+  PROMPT  = CDR drill type
+}
+OPTION {
+  NAME    = .cdr_mirror
+  ENTITY  = LAYER
+  OPTIONS = Unset;No;Yes
+  DEF     = Unset
+  PROMPT  = CDR mirror
+}
+INTEGER {
+  NAME    = .cdr_val
+  ENTITY  = FEATURE
+  DEF     = 0
+  MIN_VAL = -1
+  MAX_VAL = 100000
+  GROUP   = AOI
+  PROMPT  = CDR value	
+}
+TEXT {
+  NAME    = .cdr14_stages
+  ENTITY  = FEATURE
+  MIN_LEN = 0
+  MAX_LEN = 400
+  GROUP   = AOI
+  PROMPT  = CDR14 Stage alignment target
+}
+TEXT {
+  NAME    = .cdr14_zone_type
+  ENTITY  = FEATURE
+  MIN_LEN = 0
+  MAX_LEN = 30
+  PROMPT  = CDR14 Zone type
+}
+BOOLEAN {
+  NAME    = .clear_dont_opt
+  ENTITY  = FEATURE
+  PROMPT  = Clearance not to be optimized
+}
+FLOAT {
+  NAME    = .combined_size
+  ENTITY  = FEATURE
+  DEF     = 0.0
+  MIN_VAL = 0.0
+  MAX_VAL = 100000.0
+  UNITS   = MIL_MICRON
+  PROMPT  = Combined tool original size
+}
+INTEGER {
+  NAME    = .connection_id
+  ENTITY  = FEATURE
+  DEF     = 1
+  MIN_VAL = 1
+  MAX_VAL = 10000
+  PROMPT  = JTAG Connection ID
+}
+BOOLEAN {
+  NAME    = .copper_defined
+  ENTITY  = FEATURE
+  PROMPT  = Copper defined pad
+}
+FLOAT   {
+  NAME    = .copper_thickness
+  ENTITY  = LAYER
+  DEF     = 1.0
+  MIN_VAL = 0.0
+  MAX_VAL = 1000.0
+  PROMPT  = Copper Thickness
+}
+BOOLEAN {
+  NAME    = .covered
+  ENTITY  = FEATURE
+  PROMPT  = Covered pad
+}
+BOOLEAN {
+   NAME   = .deferred
+   ENTITY = FEATURE
+   DEF    = NO
+   PROMPT = Deferred
+}
+FLOAT {
+  NAME    = .depth
+  ENTITY  = LAYER;FEATURE
+  DEF     = 0.0
+  MIN_VAL = 0.0
+  MAX_VAL = 1000.0
+  PROMPT  = Drill Depth
+  UNITS   = MIL_MICRON
+  GROUP   = ROUT
+}
+BOOLEAN {
+  NAME    = .detch_comp
+  ENTITY  = FEATURE
+  PROMPT  = Detch Compensation feature
+}
+OPTION {
+  NAME    = .detch_orig_type
+  ENTITY  = FEATURE
+  OPTIONS = line;pad;surface;arc
+  PROMPT  = Original feature type before Detch
+}
+BOOLEAN {
+  NAME    = .detch_smooth
+  ENTITY  = FEATURE
+  PROMPT  = Detch smooth feature
+}
+BOOLEAN {
+  NAME    = .detch_tapering
+  ENTITY  = FEATURE
+  PROMPT  = Detch tapering feature
+}
+TEXT {
+  NAME    = .dfm_added_shave
+  ENTITY  = FEATURE
+  MIN_LEN = 0
+  MAX_LEN = 64
+  PROMPT  = Shave added by DFM
+}
+BOOLEAN {
+  NAME    = .dont_repair
+  ENTITY  = FEATURE
+  PROMPT  = Do not repair
+}
+OPTION {
+  NAME    = .drill_first_last
+  ENTITY  = FEATURE
+  OPTIONS = none;first;last
+  PROMPT  = First_Last drill
+}
+BOOLEAN {
+  NAME    = .dummy_pin
+  ENTITY  = FEATURE
+  PROMPT  = Dummy pin
+}
+BOOLEAN {
+  NAME    = .embedded
+  ENTITY  = FEATURE
+  PROMPT  = Embedded pad
+}
+INTEGER {
+  NAME    = .entity_version
+  ENTITY  = STEP;SYMBOL
+  DEF     = 0
+  MIN_VAL = 0
+  MAX_VAL = 2147418112
+  PROMPT  = Number of changes
+}
+BOOLEAN {
+  NAME    = .et_stamp
+  ENTITY  = FEATURE
+  PROMPT  = ET stamp
+}
+BOOLEAN {
+  NAME    = .etch_comp_addition
+  ENTITY  = FEATURE
+  PROMPT  = Added by etch compensation
+}
+FLOAT {
+  NAME    = .etm_adapter_h
+  ENTITY  = STEP
+  DEF     = 3750
+  MIN_VAL = 0.000001
+  MAX_VAL = 5000
+  PROMPT  = Adapter Height in Mils(et)
+}
+OPTION {
+  NAME    = .etm_constant_drill_usage
+  ENTITY  = FEATURE
+  OPTIONS = plate;cs_board;cs_grid;test
+  PROMPT  = ETM constant drill usage
+  GROUP   = ET
+}
+FLOAT {
+  NAME    = .etm_height
+  ENTITY  = LAYER
+  DEF     = 20.0
+  MIN_VAL = 0.0
+  MAX_VAL = 5000.0
+  PROMPT  = Plate Height(ET)
+}
+BOOLEAN {
+  NAME    = .etm_mirror
+  ENTITY  = LAYER
+  DEF     = NO
+  PROMPT  = Plate mirror for drill (ET)
+}
+TEXT {
+  NAME    = .etm_pin_name
+  ENTITY  = FEATURE
+  MIN_LEN = 0
+  MAX_LEN = 64
+  PROMPT  = ETM Pin Name
+  GROUP   = ET
+}
+OPTION {
+  NAME    = .etm_pin_style
+  ENTITY  = STEP
+  OPTIONS = Regular;Mania
+  DEF     = Regular
+  PROMPT  = Pin Guiding Style(et)
+}
+FLOAT {
+  NAME    = .etm_prim_sink_h
+  ENTITY  = LAYER
+  DEF     = 0.0
+  MIN_VAL = 0.0
+  MAX_VAL = 1000.0
+  PROMPT  = Countersink Depth on Primary side(ET)
+}
+FLOAT {
+  NAME    = .etm_prim_sink_r
+  ENTITY  = LAYER
+  DEF     = 0.0
+  MIN_VAL = 0.0
+  MAX_VAL = 1000.0
+  PROMPT  = Countersink Threshold Radius on Primary side(ET)
+}
+FLOAT {
+  NAME    = .etm_prim_sink_s
+  ENTITY  = LAYER
+  DEF     = 0.0
+  MIN_VAL = 0.0
+  MAX_VAL = 1000.0
+  PROMPT  = Countersink Drill Size on Primary side(ET)
+}
+
+OPTION {
+  NAME    = .etm_repair_fmt
+  ENTITY  = STEP
+  OPTIONS = None;EPC
+  DEF     = None
+  PROMPT  = Repair File Format(et)
+}
+
+OPTION {
+  NAME    = .etm_rotate
+  ENTITY  = LAYER
+  OPTIONS = 0;90;180;270
+  DEF     = 0
+  PROMPT  = Plate rotation for drill (ET)
+}
+FLOAT {
+  NAME    = .etm_sec_sink_h
+  ENTITY  = LAYER
+  DEF     = 0.0
+  MIN_VAL = 0.0
+  MAX_VAL = 1000.0
+  PROMPT  = Countersink Depth on Secondary side(ET)
+}
+FLOAT {
+  NAME    = .etm_sec_sink_r
+  ENTITY  = LAYER
+  DEF     = 0.0
+  MIN_VAL = 0.0
+  MAX_VAL = 1000.0
+  PROMPT  = Countersink Threshold Radius on Secondary side(ET)
+}
+FLOAT {
+  NAME    = .etm_sec_sink_s
+  ENTITY  = LAYER
+  DEF     = 0.0
+  MIN_VAL = 0.0
+  MAX_VAL = 1000.0
+  PROMPT  = Countersink Drill Size on Secondary side(ET)
+}
+FLOAT {
+  NAME    = .etm_shift_x
+  ENTITY  = LAYER
+  DEF     = 0.0
+  MIN_VAL = -100000.0
+  MAX_VAL = 100000.0
+  PROMPT  = Shift for drill by x (ET)
+}
+FLOAT {
+  NAME    = .etm_shift_y
+  ENTITY  = LAYER
+  DEF     = 0.0
+  MIN_VAL = -100000.0
+  MAX_VAL = 100000.0
+  PROMPT  = Shift for drill by y(ET)
+}
+FLOAT {
+  NAME    = .etm_step_x
+  ENTITY  = LAYER
+  DEF     = 0.0
+  MIN_VAL = 0.0
+  MAX_VAL = 1000.0
+  PROMPT  = Grid step by x(ET)
+}
+FLOAT {
+  NAME    = .etm_step_y
+  ENTITY  = LAYER
+  DEF     = 0.0
+  MIN_VAL = 0.0
+  MAX_VAL = 1000.0
+  PROMPT  = Grid step by y(ET)
+}
+OPTION {
+  NAME    = .etm_tester
+  ENTITY  = STEP
+  OPTIONS = Mania;Everett Charles;Circuitline;Luther Maelzer;Probot;BSL;IntegriTest;MicroCraft;ATG
+  DEF     = Mania
+  PROMPT  = Tester name(et)
+}
+FLOAT {
+  NAME    = .etm_thickness
+  ENTITY  = LAYER
+  DEF     = 20.0
+  MIN_VAL = 0.0
+  MAX_VAL = 1000.0
+  PROMPT  = Plate Thickness(ET)
+}
+FLOAT {
+  NAME    = .feature_fill_margin
+  ENTITY  = FEATURE
+  MIN_VAL = -10.0
+  MAX_VAL = 100.0
+  UNITS   = MIL_MICRON
+  PROMPT  = Feature Fill margin
+}
+TEXT {
+  NAME    = .flipped_of
+  ENTITY  = STEP;LAYER
+  MIN_LEN = 0
+  MAX_LEN = 64
+  PROMPT  = Source entity
+}
+BOOLEAN {
+  NAME    = .flipped_out_of_date
+  ENTITY  = STEP
+  DEF     = NO
+  PROMPT  = Out of date
+}
+BOOLEAN {
+  NAME    = .force_galv_etch
+  ENTITY  = FEATURE
+  PROMPT  = Force Galvanic Etch
+}
+OPTION {
+  NAME    = .generated_net_point
+  ENTITY  = FEATURE
+  OPTIONS = drawn;split;gasket;other
+  PROMPT  = Generated Net point
+}
+BOOLEAN {
+  NAME    = .ignore_action
+  ENTITY  = FEATURE
+  PROMPT  = To be ignored by DFM action
+}
+TEXT {
+  NAME    = .imp_info
+  ENTITY  = FEATURE
+  MIN_LEN = 0
+  MAX_LEN = 1000
+  PROMPT  = Impedance info
+}
+INTEGER {
+  NAME    = .imp_line_candidate
+  ENTITY  = FEATURE
+  DEF     = 0
+  MIN_VAL = 0
+  MAX_VAL = 100000
+  PROMPT  = Imp. line candidate
+}
+INTEGER {
+  NAME    = .infeed_speed
+  ENTITY  = FEATURE
+  DEF     = 0
+  MIN_VAL = 0
+  MAX_VAL = 100000
+  PROMPT  = Infeed speed
+}
+TEXT {
+  NAME    = .inp_net_name
+  ENTITY  = FEATURE
+  MIN_LEN = 0
+  MAX_LEN = 100
+  PROMPT  = Input net name
+}
+FLOAT {
+  NAME    = .inp_x_scale
+  ENTITY  = LAYER
+  DEF     = 1.0
+  MIN_VAL = -9.99999
+  MAX_VAL = 9.99999
+  PROMPT  = Input X scale
+}
+FLOAT {
+  NAME    = .inp_y_scale
+  ENTITY  = LAYER
+  DEF     = 1.0
+  MIN_VAL = -9.99999
+  MAX_VAL = 9.99999
+  PROMPT  = Input Y scale
+}
+INTEGER {
+  NAME    = .jtag_component_id
+  ENTITY  = FEATURE
+  DEF     = 1
+  MIN_VAL = 1
+  MAX_VAL = 100
+  PROMPT  = JTAG component ID
+}
+BOOLEAN {
+  NAME    = .laser_via_pad
+  ENTITY  = FEATURE
+  PROMPT  = Laser via pad
+}
+TEXT {
+  NAME    = .nec_cbnk_blank_name
+  ENTITY  = LAYER
+  MIN_LEN = 0
+  MAX_LEN = 8
+  PROMPT  = Blank Name (NEC-CBNK record)
+}
+TEXT {
+  NAME    = .nec_n1_draw_num
+  ENTITY  = LAYER
+  MIN_LEN = 0
+  MAX_LEN = 20
+  PROMPT  = Drawing Num.(NEC-N1 record)
+}
+TEXT {
+  NAME    = .nec_n1_rev
+  ENTITY  = LAYER
+  MIN_LEN = 0
+  MAX_LEN = 2
+  PROMPT  = Drawing Revision.(NEC-N1 record)
+}
+TEXT {
+  NAME    = .nec_n2_draw_num
+  ENTITY  = LAYER
+  MIN_LEN = 0
+  MAX_LEN = 20
+  PROMPT  = Drawing Num.(NEC-N2 record)
+}
+TEXT {
+  NAME    = .nec_n2_rev
+  ENTITY  = LAYER
+  MIN_LEN = 0
+  MAX_LEN = 2
+  PROMPT  = Drwing Revision.(NEC-N2 record)
+}
+TEXT {
+  NAME    = .nec_n3_edit_level
+  ENTITY  = LAYER
+  MIN_LEN = 0
+  MAX_LEN = 1
+  PROMPT  = Editing Level (NEC-N3 record)
+}
+TEXT {
+  NAME    = .nec_n3_lyr_type
+  ENTITY  = LAYER
+  MIN_LEN = 0
+  MAX_LEN = 3
+  PROMPT  = Layer Type (NEC-N3 record)
+}
+TEXT {
+  NAME    = .nec_n3_pol
+  ENTITY  = LAYER
+  MIN_LEN = 0
+  MAX_LEN = 1
+  PROMPT  = Data Polarity (NEC-N3 record)
+}
+TEXT {
+  NAME    = .nec_n3_prod_rev
+  ENTITY  = LAYER
+  MIN_LEN = 0
+  MAX_LEN = 2
+  PROMPT  = Production Revision (NEC-N3 record)
+}
+TEXT {
+  NAME    = .nec_n3_target_lyr
+  ENTITY  = LAYER
+  MIN_LEN = 0
+  MAX_LEN = 2
+  PROMPT  = Target Layer (NEC-N3 record)
+}
+INTEGER {
+  NAME    = .netpt_pt_ind
+  ENTITY  = FEATURE
+  DEF     = 0
+  MIN_VAL = 0
+  MAX_VAL = 254000000
+  PROMPT  = Net point shape index
+}
+BOOLEAN {
+  NAME    = .nfl
+  ENTITY  = FEATURE
+  PROMPT  = Non functional line
+}
+BOOLEAN {
+  NAME    = .nfp
+  ENTITY  = FEATURE
+  PROMPT  = Non functional pad
+}
+TEXT {
+  NAME    = .nomenclature_type
+  ENTITY  = SYMBOL
+  MIN_LEN = 0
+  MAX_LEN = 100
+  PROMPT  = Nomenclature type
+}
+BOOLEAN {
+  NAME    = .notest_req
+  ENTITY  = FEATURE
+  PROMPT  = Do not test
+}
+BOOLEAN {
+  NAME    = .npth_pad
+  ENTITY  = FEATURE
+  PROMPT  = NPTH pad
+}
+TEXT {
+  NAME    = .numbered_layer
+  ENTITY  = LAYER
+  MIN_LEN = 0
+  MAX_LEN = 500
+  PROMPT  = Layer steps were numbered
+}
+OPTION {
+  NAME    = .orbotech_barcode_string
+  ENTITY  = FEATURE
+  OPTIONS = none;top;bottom
+  PROMPT  = Orbotech barcode string
+}
+TEXT {
+  NAME    = .orig_features
+  ENTITY  = FEATURE
+  MIN_LEN = 0
+  MAX_LEN = 1000
+  PROMPT  = Original features
+}
+TEXT {
+  NAME    = .orig_size_inch
+  ENTITY  = FEATURE
+  MIN_LEN = 0
+  MAX_LEN = 1000
+  PROMPT  = Original pad size (inch)
+}
+TEXT {
+  NAME    = .orig_size_mm
+  ENTITY  = FEATURE
+  MIN_LEN = 0
+  MAX_LEN = 1000
+  PROMPT  = Original pad size (mm)
+}
+BOOLEAN {
+  NAME    = .orig_tooling_holes_set
+  ENTITY  = FEATURE
+  DEF     = NO
+  PROMPT  = Original Tooling Holes set
+}
+BOOLEAN {
+  NAME    = .osp_pad
+  ENTITY  = FEATURE
+  PROMPT  = OSP pad
+}
+BOOLEAN {
+  NAME    = .out_nc_ignore
+  ENTITY  = FEATURE
+  PROMPT  = Ignore for NC output
+}
+BOOLEAN {
+  NAME    = .out_nc_verif
+  ENTITY  = FEATURE
+  PROMPT  = Part of NC verification coupon
+}
+BOOLEAN {
+  NAME    = .partially_covered
+  ENTITY  = FEATURE
+  PROMPT  = Partially covered pad
+}
+BOOLEAN {
+  NAME    = .partially_embedded
+  ENTITY  = FEATURE
+  PROMPT  = Partially embedded pad
+}
+FLOAT {
+  NAME    = .pilot_hole_offset_along
+  ENTITY  = FEATURE
+  DEF     = 0.0
+  MIN_VAL = -1000.0
+  MAX_VAL = 1000.0
+  PROMPT  = Pilot hole offset along chain
+  UNITS   = MIL_MICRON
+}
+FLOAT {
+  NAME    = .pilot_hole_offset_perpend
+  ENTITY  = FEATURE
+  DEF     = 0.0
+  MIN_VAL = -1000.0
+  MAX_VAL = 1000.0
+  PROMPT  = Pilot hole offset perpendicular to chain
+  UNITS   = MIL_MICRON
+  GROUP   = ROUT
+}
+BOOLEAN {
+  NAME    = .plating_bar
+  ENTITY  = FEATURE
+  PROMPT  = Plating bar
+}
+TEXT {
+  NAME    = .pnl_class
+  ENTITY  = STEP
+  MIN_LEN = 0
+  MAX_LEN = 64
+  PROMPT  = Panel class
+}
+TEXT {
+  NAME    = .pnl_pcb
+  ENTITY  = STEP
+  MIN_LEN = 0
+  MAX_LEN = 64
+  PROMPT  = Panelized step
+}
+TEXT {
+  NAME    = .pnl_place
+  ENTITY  = STEP;FEATURE
+  MIN_LEN = 0
+  MAX_LEN = 64
+  PROMPT  = Placement rule/directive
+  GROUP   = PANELIZATION
+}
+TEXT {
+  NAME    = .pnl_scheme
+  ENTITY  = STEP
+  MIN_LEN = 0
+  MAX_LEN = 64
+  PROMPT  = Panelization scheme
+}
+OPTION {
+  NAME    = .pressure_foot
+  ENTITY  = FEATURE
+  OPTIONS = none;all;last;except_last
+  PROMPT  = Pressure foot
+}
+BOOLEAN {
+  NAME    = .pth_pad
+  ENTITY  = FEATURE
+  PROMPT  = PTH pad
+}
+TEXT {
+  NAME    = .released_from
+  ENTITY  = STEP
+  MIN_LEN = 0
+  MAX_LEN = 64
+  PROMPT  = Released from step
+}
+INTEGER {
+  NAME    = .retract_speed
+  ENTITY  = FEATURE
+  DEF     = 0
+  MIN_VAL = 0
+  MAX_VAL = 100000
+  PROMPT  = Retract speed
+}
+TEXT {
+  NAME    = .rotated_of
+  ENTITY  = STEP
+  MIN_LEN = 0
+  MAX_LEN = 64
+  PROMPT  = Source of rotated step
+}
+FLOAT {
+  NAME    = .rotation_angle
+  ENTITY  = STEP
+  DEF     = 0.0
+  MIN_VAL = -360.0
+  MAX_VAL = 360.0
+  PROMPT  = Step rotation angle (deg.)
+}
+INTEGER {
+  NAME    = .rout_cutoff_feed
+  ENTITY  = FEATURE
+  DEF     = 0
+  MIN_VAL = 0
+  MAX_VAL = 100000
+  PROMPT  = Rout Cutoff Feed
+}
+FLOAT {
+  NAME    = .rout_grid_x_offset
+  ENTITY  = FEATURE
+  DEF     = 0.0
+  MIN_VAL = -100.0
+  MAX_VAL = 100.0
+  UNITS   = INCH_MM
+  GROUP   = ROUT
+  PROMPT  = Rout Grid X Offset
+}
+FLOAT {
+  NAME    = .rout_grid_y_offset
+  ENTITY  = FEATURE
+  DEF     = 0.0
+  MIN_VAL = -100.0
+  MAX_VAL = 100.0
+  UNITS   = INCH_MM
+  GROUP   = ROUT
+  PROMPT  = Rout Grid Y Offset
+}
+TEXT {
+  NAME    = .rout_message
+  ENTITY  = FEATURE
+  MIN_LEN = 0
+  MAX_LEN = 20
+  GROUP   = ROUT
+  PROMPT  = Rout operator message
+}
+INTEGER {
+  NAME    = .rout_plunge_feed
+  ENTITY  = FEATURE
+  DEF     = 0
+  MIN_VAL = 0
+  MAX_VAL = 100000
+  GROUP   = ROUT
+  PROMPT  = Rout Plunge feed
+}
+OPTION {
+  NAME    = .rout_plunge_mode
+  ENTITY  = FEATURE
+  OPTIONS = none;straight;overlap;arc;diag;diag_ang
+  GROUP   = ROUT
+  PROMPT  = Rout plunge mode
+}
+FLOAT {
+  NAME    = .rout_plunge_val_a
+  ENTITY  = FEATURE
+  DEF     = 0.0
+  MIN_VAL = 0.0
+  MAX_VAL = 100.0
+  UNITS   = INCH_MM
+  GROUP   = ROUT
+  PROMPT  = Rout plunge value A
+}
+FLOAT {
+  NAME    = .rout_plunge_val_b
+  ENTITY  = FEATURE
+  DEF     = 0.0
+  MIN_VAL = 0.0
+  MAX_VAL = 100.0
+  UNITS   = INCH_MM
+  GROUP   = ROUT
+  PROMPT  = Rout plunge value B
+}
+FLOAT {
+  NAME    = .rout_plunge_val_c
+  ENTITY  = FEATURE
+  DEF     = 0.0
+  MIN_VAL = 0.0
+  MAX_VAL = 100.0
+  UNITS   = INCH_MM
+  GROUP   = ROUT
+  PROMPT  = Rout plunge value C
+}
+FLOAT {
+  NAME    = .rout_plunge_val_d
+  ENTITY  = FEATURE
+  DEF     = 0.0
+  MIN_VAL = 0.0
+  MAX_VAL = 100.0
+  UNITS   = INCH_MM
+  GROUP   = ROUT
+  PROMPT  = Rout plunge value D
+}
+FLOAT {
+  NAME    = .rout_plunge_val_e
+  ENTITY  = FEATURE
+  DEF     = 0.0
+  MIN_VAL = 0.0
+  MAX_VAL = 100.0
+  UNITS   = INCH_MM
+  GROUP   = ROUT
+  PROMPT  = Rout plunge value E
+}
+FLOAT {
+  NAME    = .rout_plunge_val_f
+  ENTITY  = FEATURE
+  DEF     = 0.0
+  MIN_VAL = 0.0
+  MAX_VAL = 100.0
+  UNITS   = INCH_MM
+  GROUP   = ROUT
+  PROMPT  = Rout plunge value F
+}
+INTEGER {
+  NAME    = .rout_plunge_val_v1
+  ENTITY  = FEATURE
+  DEF     = 0
+  MIN_VAL = 0
+  MAX_VAL = 90
+  GROUP   = ROUT
+  PROMPT  = Rout plunge value V1
+}
+INTEGER {
+  NAME    = .rout_repeat
+  ENTITY  = FEATURE
+  GROUP   = ROUT
+  MAX_VAL = 1
+  PROMPT  = Repeat rout path
+}
+INTEGER {
+  NAME    = .rout_plunge_val_v2
+  ENTITY  = FEATURE
+  DEF     = 0
+  MIN_VAL = 0
+  MAX_VAL = 90
+  GROUP   = ROUT
+  PROMPT  = Rout plunge value v2
+}
+OPTION {
+  NAME    = .rout_pocket_direction
+  ENTITY  = FEATURE
+  OPTIONS = standard;opposite
+  GROUP   = ROUT
+  PROMPT  = Rout pocket direction
+}
+INTEGER {
+  NAME    = .rout_pocket_feed
+  ENTITY  = FEATURE
+  DEF     = 0
+  MIN_VAL = 0
+  MAX_VAL = 100000
+  GROUP   = ROUT
+  PROMPT  = Rout Pocket feed
+}
+OPTION {
+  NAME    = .rout_pocket_mode
+  ENTITY  = FEATURE
+  OPTIONS = none;concentric;snake;spiral;star;grid
+  GROUP   = ROUT
+  PROMPT  = Rout pocket mode
+}
+FLOAT {
+  NAME    = .rout_pocket_overlap
+  ENTITY  = FEATURE
+  DEF     = 0.0
+  MIN_VAL = -100.0
+  MAX_VAL = 100.0
+  UNITS   = INCH_MM
+  GROUP   = ROUT
+  PROMPT  = Rout pocket overlap
+}
+
+FLOAT {
+  NAME    = .rout_tool
+  ENTITY  = FEATURE
+  DEF     = 0.0
+  MIN_VAL = 0.0
+  MAX_VAL = 100.0
+  UNITS   = INCH_MM
+  GROUP   = ROUT
+  PROMPT  = Rout tool size
+}
+FLOAT {
+  NAME    = .rout_tool2
+  ENTITY  = FEATURE
+  DEF     = 0.0
+  MIN_VAL = 0.0
+  MAX_VAL = 100.0
+  UNITS   = INCH_MM
+  GROUP   = ROUT
+  PROMPT  = Rout 2nd tool size
+}
+OPTION {
+  NAME    = .rout_type
+  ENTITY  = FEATURE
+  OPTIONS = regular;pocket;drill;message;stop
+  GROUP   = ROUT
+  PROMPT  = Rout type
+}
+OPTION {
+  NAME    = .se_coupon
+  ENTITY  = STEP
+  OPTIONS = None;Drill;Rout
+  DEF     = None
+  PROMPT  = Start/End coupon type
+}
+OPTION {
+  NAME    = .se_coupon_direct
+  ENTITY  = LAYER
+  OPTIONS = 0;90;180;270
+  DEF     = 0
+  PROMPT  = Start/End coupon direction
+}
+OPTION {
+  NAME    = .se_coupon_dist_type
+  ENTITY  = LAYER
+  OPTIONS = Spacing;Center
+  DEF     = Spacing
+  PROMPT  = Start/End coupon distance type
+}
+
+FLOAT {
+  NAME    = .se_coupon_max_size
+  ENTITY  = LAYER
+  DEF     = 0.0
+  MIN_VAL = 0.0
+  MAX_VAL = 10000.0
+  UNITS   = MIL_MICRON
+  PROMPT  = Start/End coupon max size
+}
+OPTION {
+  NAME    = .se_coupon_method
+  ENTITY  = LAYER
+  OPTIONS = None;Auto;FromPoint
+  DEF     = None
+  PROMPT  = Start/End coupon calculation method
+}
+INTEGER {
+  NAME    = .se_coupon_min_hits
+  ENTITY  = LAYER
+  DEF     = 0
+  MIN_VAL = 0
+  MAX_VAL = 10000
+  PROMPT  = Start/End coupon min hits
+}
+FLOAT {
+  NAME    = .se_coupon_min_size
+  ENTITY  = LAYER
+  DEF     = 0.0
+  MIN_VAL = 0.0
+  MAX_VAL = 10000.0
+  UNITS   = MIL_MICRON
+  PROMPT  = Start/End coupon min size
+}
+OPTION {
+  NAME    = .se_coupon_mode
+  ENTITY  = STEP
+  OPTIONS = Start_End;Start;End
+  DEF     = Start_End
+  PROMPT  = Start/End coupon mode
+}
+
+FLOAT {
+  NAME    = .se_coupon_slot_angle
+  ENTITY  = LAYER
+  DEF     = 0.0
+  MIN_VAL = 0.0
+  MAX_VAL = 360.0
+  PROMPT  = Start/End coupon slot angle
+}
+FLOAT {
+  NAME    = .se_coupon_slot_length
+  ENTITY  = LAYER
+  DEF     = 0.0
+  MIN_VAL = 0.0
+  MAX_VAL = 10000.0
+  UNITS   = MIL_MICRON
+  PROMPT  = Start/End coupon slot length
+}
+OPTION {
+  NAME    = .se_coupon_split_num
+  ENTITY  = STEP
+  OPTIONS = 1;2
+  DEF     = 1
+  PROMPT  = Start/End coupon split number
+}
+BOOLEAN {
+  NAME    = .solder_defined
+  ENTITY  = FEATURE
+  GROUP   = FEATURE
+  PROMPT  = Solder defined pad
+}
+TEXT {
+  NAME    = .source_name
+  ENTITY  = STEP;SYMBOL
+  MIN_LEN = 0
+  MAX_LEN = 64
+  PROMPT  = Original entity name
+}
+BOOLEAN {
+  NAME    = .sr_pcb
+  ENTITY  = STEP
+  DEF     = NO
+  PROMPT  = S&R PCB
+}
+TEXT {
+  NAME    = .step_numbering
+  ENTITY  = FEATURE
+  MIN_LEN = 0
+  MAX_LEN = 500
+  GROUP   = FEATURE
+  PROMPT  = Step numbering value
+}
+FLOAT {
+  NAME    = .surface_outline_widths
+  ENTITY  = FEATURE
+  DEF     = 0.001
+  MIN_VAL = 0.000001
+  MAX_VAL = 100.0
+  UNITS   = INCH_MM
+  GROUP   = FEATURE
+  PROMPT  = Surface outline width
+}
+BOOLEAN {
+  NAME    = .tapering_feature
+  ENTITY  = FEATURE
+  GROUP   = FEATURE
+  PROMPT  = Tapering feature
+}
+
+FLOAT {
+  NAME    = .text_line_width
+  ENTITY  = SYMBOL
+  DEF     = 0.0
+  MIN_VAL = 0.0
+  MAX_VAL = 100.0
+  UNITS   = INCH_MM
+  PROMPT  = Text line width
+}
+FLOAT {
+  NAME    = .text_rotation
+  ENTITY  = SYMBOL
+  DEF     = 0.0
+  MIN_VAL = 0.0
+  MAX_VAL = 360.0
+  PROMPT  = Text rotation
+}
+INTEGER {
+  NAME    = .text_version
+  ENTITY  = SYMBOL
+  DEF     = 1
+  MIN_VAL = 0
+  MAX_VAL = 1
+  PROMPT  = Text version
+}
+FLOAT {
+  NAME    = .text_x_size
+  ENTITY  = SYMBOL
+  DEF     = 0.0
+  MIN_VAL = 0.0
+  MAX_VAL = 100.0
+  UNITS   = INCH_MM
+  PROMPT  = Text y size
+}
+FLOAT {
+  NAME    = .text_y_size
+  ENTITY  = SYMBOL
+  DEF     = 0.0
+  MIN_VAL = 0.0
+  MAX_VAL = 100.0
+  UNITS   = INCH_MM
+  PROMPT  = Text x size
+}
+BOOLEAN {
+  NAME    = .tie
+  ENTITY  = FEATURE
+  GROUP   = FEATURE
+  PROMPT  = Tieline
+}
+BOOLEAN {
+  NAME    = .tie_plane
+  ENTITY  = FEATURE
+  GROUP   = FEATURE
+  PROMPT  = Tie plane
+}
+BOOLEAN {
+  NAME    = .tiedown
+  ENTITY  = FEATURE
+  GROUP   = FEATURE
+  PROMPT  = Tiedown
+}
+INTEGER {
+  NAME    = .tooling_holes_set
+  ENTITY  = FEATURE
+  DEF     = 0
+  MIN_VAL = 0
+  MAX_VAL = 100000
+  PROMPT  = Tooling Hole set index
+  GROUP   = FEATURE
+}
+TEXT {
+  NAME    = .transform_data
+  ENTITY  = STEP
+  MIN_LEN = 0
+  MAX_LEN = 64
+  PROMPT  = Transformation data
+}
+BOOLEAN {
+  NAME    = .via_pad
+  ENTITY  = FEATURE
+  GROUP   = FEATURE
+  PROMPT  = Via pad
+}
+OPTION {
+  NAME    = .via_type_pad
+  ENTITY  = FEATURE
+  OPTIONS = drilled;laser
+  GROUP   = FEATURE
+  PROMPT  = Via pad type
+}
+OPTION {
+  NAME    = .add_pilot_mode
+  ENTITY  = FEATURE
+  OPTIONS = plunge;retract;both
+  GROUP   = FEATURE
+  PROMPT  = Pilot hole mode
+}
+BOOLEAN {
+  NAME    = .added_connection
+  ENTITY  = FEATURE
+  GROUP   = FEATURE
+  PROMPT  = Added connection
+}
+BOOLEAN {
+  NAME    = .ball_pad
+  ENTITY  = FEATURE
+  GROUP   = FEATURE
+  PROMPT  = Ball pad
+}
+BOOLEAN {
+  NAME    = .bump_pad
+  ENTITY  = FEATURE
+  GROUP   = FEATURE
+  PROMPT  = Bump pad
+}
+FLOAT {
+  NAME    = .enlarged_clearance_size
+  ENTITY  = FEATURE
+  GROUP   = FEATURE
+  MAX_VAL = 1000
+  UNITS   = MIL_MICRON
+  PROMPT  = Enlarged clearance size
+}
+TEXT {
+  NAME    = .entity_name
+  ENTITY  = Eall
+  MIN_LEN = 0
+  MAX_LEN = 128
+  PROMPT  = Entity name
+}
+FLOAT {
+  NAME    = .imp_orig_lw
+  ENTITY  = FEATURE
+  GROUP   = FEATURE
+  MAX_VAL = 100000.0
+  UNITS   = MIL_MICRON
+  PROMPT  = Original Impedance line width
+}
+OPTION {
+  NAME    = .imp_type
+  ENTITY  = FEATURE
+  OPTIONS = Single-Ended;Differential;Single-Ended Coplanar;Differential Coplanar
+  GROUP   = FEATURE
+  PROMPT  = Impedance model
+}
+OPTION {
+  NAME    = .rout_snake_direction
+  ENTITY  = FEATURE
+  OPTIONS = horizontal;vertical;best
+  GROUP   = FEATURE
+  PROMPT  = Rout snake direction
+}
+FLOAT {
+  NAME    = .se_coupon_dist
+  ENTITY  = LAYER
+  GROUP   = LAYER
+  MAX_VAL = 10000.0
+  UNITS   = MIL_MICRON
+  PROMPT  = Start/End coupon distance
+}
+
+INTEGER {
+  NAME    = .se_coupon_order
+  ENTITY  = STEP
+  DEF     = 1
+  MIN_VAL = 1
+  MAX_VAL = 100
+  PROMPT  = Start/End coupon order
+}
+
+INTEGER {
+  NAME    = .slr_shave_reason_ind
+  ENTITY  = FEATURE
+  MAX_VAL = 1000000
+  PROMPT  = SLR shave reason index
+}
+BOOLEAN {
+  NAME    = .smooth
+  ENTITY  = FEATURE
+  GROUP   = FEATURE
+  PROMPT  = Smoothing feature
+}
+INTEGER {
+  NAME    = .split_clear
+  ENTITY  = FEATURE
+  MAX_VAL = 100000
+  PROMPT  = Split clearance
+}
+OPTION {
+  NAME    = .sym_units_resolution
+  ENTITY  = JOB
+  OPTIONS = 0.001Mil;0.01micron;0.01Mil;0.1micron
+  DEF     = 0.001Mil
+  PROMPT  = Symbol Units Resolution
+}
+BOOLEAN {
+  NAME    = .test_req
+  ENTITY  = FEATURE
+  GROUP   = FEATURE
+  PROMPT  = ET test required
+}
+TEXT {
+  NAME    = .text
+  ENTITY  = SYMBOL
+  MIN_LEN = 0
+  MAX_LEN = 1000
+  PROMPT  = Text
+}
+TEXT {
+  NAME    = .se_coupon_imprint_layer
+  ENTITY  = LAYER
+  MIN_LEN = 0
+  MAX_LEN = 10000
+  PROMPT  = Start/End Coupon imprint layer
+}
+
